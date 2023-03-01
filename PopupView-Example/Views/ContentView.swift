@@ -21,7 +21,7 @@ struct ContentView: View {
         }
         .padding()
         .onTapGesture {
-            BottomPopup_PrivacyInfo().present()
+            CentrePopup_UnlockNewFeatures().present()
         }
     }
 }

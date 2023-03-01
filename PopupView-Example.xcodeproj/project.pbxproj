@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D3C1D0929AFA5FE0065F1F1 /* CentrePopup_UnlockNewFeatures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3C1D0829AFA5FE0065F1F1 /* CentrePopup_UnlockNewFeatures.swift */; };
 		6D4C04B829AECCEA00165FC2 /* Font++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4C04B729AECCEA00165FC2 /* Font++.swift */; };
 		6D4C04BA29AECCEF00165FC2 /* Color++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4C04B929AECCEF00165FC2 /* Color++.swift */; };
 		6D4C04BC29AED11E00165FC2 /* UIScreen++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4C04BB29AED11E00165FC2 /* UIScreen++.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6D3C1D0829AFA5FE0065F1F1 /* CentrePopup_UnlockNewFeatures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentrePopup_UnlockNewFeatures.swift; sourceTree = "<group>"; };
 		6D4C04B729AECCEA00165FC2 /* Font++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font++.swift"; sourceTree = "<group>"; };
 		6D4C04B929AECCEF00165FC2 /* Color++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color++.swift"; sourceTree = "<group>"; };
 		6D4C04BB29AED11E00165FC2 /* UIScreen++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen++.swift"; sourceTree = "<group>"; };
@@ -75,6 +77,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D3C1D0729AFA5F00065F1F1 /* Centre */ = {
+			isa = PBXGroup;
+			children = (
+				6D3C1D0829AFA5FE0065F1F1 /* CentrePopup_UnlockNewFeatures.swift */,
+			);
+			path = Centre;
+			sourceTree = "<group>";
+		};
 		6D4C04B629AECCD000165FC2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,25 +137,10 @@
 		6DC8D34429AEC596005FF18C /* Popups */ = {
 			isa = PBXGroup;
 			children = (
-				6DC8D34529AEC59E005FF18C /* Top */,
-				6DC8D34629AEC5A1005FF18C /* Centre */,
+				6D3C1D0729AFA5F00065F1F1 /* Centre */,
 				6DC8D34729AEC5A8005FF18C /* Bottom */,
 			);
 			path = Popups;
-			sourceTree = "<group>";
-		};
-		6DC8D34529AEC59E005FF18C /* Top */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Top;
-			sourceTree = "<group>";
-		};
-		6DC8D34629AEC5A1005FF18C /* Centre */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Centre;
 			sourceTree = "<group>";
 		};
 		6DC8D34729AEC5A8005FF18C /* Bottom */ = {
@@ -309,6 +304,7 @@
 				6DA1411B29AF720C00A3DC0A /* View++.swift in Sources */,
 				6DC0834E29ACA33E0031481C /* ContentView.swift in Sources */,
 				6D4C04C229AED7D900165FC2 /* String++.swift in Sources */,
+				6D3C1D0929AFA5FE0065F1F1 /* CentrePopup_UnlockNewFeatures.swift in Sources */,
 				6DC0834C29ACA33E0031481C /* PopupView_Main.swift in Sources */,
 				6D4C04BE29AED61E00165FC2 /* BottomPopup_NoCornerRadius.swift in Sources */,
 				6DA1411929AF6C9B00A3DC0A /* BottomPopup_Document.swift in Sources */,
