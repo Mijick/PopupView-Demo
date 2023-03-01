@@ -21,7 +21,7 @@ struct ContentView: View {
         }
         .padding()
         .onTapGesture {
-            TopPopup_Alert(id: .random()).present()
+            TopPopup_Notification().present()
         }
     }
 }
