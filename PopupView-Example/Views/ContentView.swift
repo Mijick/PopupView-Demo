@@ -21,7 +21,7 @@ struct ContentView: View {
         }
         .padding()
         .onTapGesture {
-            CentrePopup_UnlockNewFeatures().present()
+            TopPopup_Alert(id: .random()).present()
         }
     }
 }
