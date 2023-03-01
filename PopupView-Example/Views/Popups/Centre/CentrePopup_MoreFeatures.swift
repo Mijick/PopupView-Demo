@@ -1,5 +1,5 @@
 //
-//  CentrePopup_UnlockNewFeatures.swift of PopupView-Example
+//  CentrePopup_MoreFeatures.swift of PopupView-Example
 //
 //  Created by Tomasz Kurylik
 //    - Twitter: https://twitter.com/tkurylik
@@ -11,7 +11,7 @@
 import SwiftUI
 import PopupView
 
-struct CentrePopup_UnlockNewFeatures: CentrePopup {
+struct CentrePopup_MoreFeatures: CentrePopup {
     func configurePopup(popup: CentrePopupConfig) -> CentrePopupConfig {
         popup.horizontalPadding(32)
     }
@@ -23,7 +23,7 @@ struct CentrePopup_UnlockNewFeatures: CentrePopup {
             Spacer.height(16)
             createDescription()
             Spacer.height(32)
-            createButtons()
+            createButton()
         }
         .padding(.top, 12)
         .padding(.bottom, 24)
@@ -31,37 +31,28 @@ struct CentrePopup_UnlockNewFeatures: CentrePopup {
     }
 }
 
-private extension CentrePopup_UnlockNewFeatures {
+private extension CentrePopup_MoreFeatures {
     func createIllustration() -> some View {
-        Image("grad-2")
+        Image("grad-3")
             .resizable()
-            .frame(160)
+            .frame(120)
     }
     func createTitle() -> some View {
-        Text("Unlock New Features")
+        Text("More Features")
             .font(.satoshiBlack(22))
             .foregroundColor(.onBackgroundPrimary)
             .multilineTextAlignment(.center)
             .fixedSize(horizontal: false, vertical: true)
     }
     func createDescription() -> some View {
-        Text("Proident adipisicing labore consectetur tempor eiusmod ullamco enim adipisicing eiusmod.")
+        Text("Esse anim aliqua cupidatat sint ea et id ea voluptate.")
             .font(.openSansRegular(15.5))
             .foregroundColor(.onBackgroundSecondary)
             .multilineTextAlignment(.center)
             .fixedSize(horizontal: false, vertical: true)
     }
-    func createButtons() -> some View {
-        HStack(spacing: 4) {
-            createCancelButton()
-            createUnlockButton()
-        }
-    }
-}
-
-private extension CentrePopup_UnlockNewFeatures {
-    func createCancelButton() -> some View {
-        Text("Cancel")
+    func createButton() -> some View {
+        Text("Back")
             .font(.satoshiBold(15))
             .foregroundColor(.onBackgroundSecondary)
             .frame(height: 48)
@@ -70,18 +61,8 @@ private extension CentrePopup_UnlockNewFeatures {
             .cornerRadius(8)
             .onTapGesture(perform: dismiss)
     }
-    func createUnlockButton() -> some View {
-        Text("Unlock")
-            .font(.satoshiBold(15))
-            .foregroundColor(.white)
-            .frame(height: 48)
-            .frame(maxWidth: .infinity)
-            .background(Color.onBackgroundPrimary)
-            .cornerRadius(8)
-            .onTapGesture(perform: CentrePopup_MoreFeatures().present)
-    }
 }
 
-extension CentrePopup_UnlockNewFeatures {
-    var id: String { "unlock-new-features" }
+extension CentrePopup_MoreFeatures {
+    var id: String { "more-features" }
 }
