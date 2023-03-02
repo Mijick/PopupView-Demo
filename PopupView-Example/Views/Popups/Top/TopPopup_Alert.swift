@@ -52,7 +52,7 @@ private extension TopPopup_Alert {
         Text("Show next".uppercased())
             .font(.openSansBold(13))
             .foregroundColor(.white)
-            .onTapGesture(perform: TopPopup_Alert(id: .random()).present)
+            .onTapGesture(perform: TopPopup_Alert(id: .random).present)
     }
 }
 

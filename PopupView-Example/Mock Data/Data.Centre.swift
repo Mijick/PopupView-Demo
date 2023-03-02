@@ -9,6 +9,7 @@
 
 
 import Foundation
+import PopupView
 
 extension Data {
     enum Centre: String, MockData { case unlockNewFeatures }
@@ -22,6 +23,11 @@ extension Data.Centre {
     var description: String {
         switch self {
             case .unlockNewFeatures: return "Standard width, typical popup that appears in the middle of your app"
+        }
+    }
+    var popup: any Popup {
+        switch self {
+            case .unlockNewFeatures: return CentrePopup_UnlockNewFeatures()
         }
     }
 }

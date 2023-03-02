@@ -9,6 +9,7 @@
 
 
 import Foundation
+import PopupView
 
 extension Data {
     enum Top: String, MockData { case alert, notification }
@@ -24,6 +25,12 @@ extension Data.Top {
         switch self {
             case .alert: return "Popup that opens on the top of your app. Ignores safe area"
             case .notification: return "Standard notification window"
+        }
+    }
+    var popup: any Popup {
+        switch self {
+            case .alert: return TopPopup_Alert(id: .random)
+            case .notification: return TopPopup_Notification()
         }
     }
 }

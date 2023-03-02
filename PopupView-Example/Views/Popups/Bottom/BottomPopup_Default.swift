@@ -58,6 +58,6 @@ private extension BottomPopup_Default {
             .frame(maxWidth: .infinity)
             .background(Color.onBackgroundPrimary)
             .cornerRadius(8)
-            .onTapGesture(perform: BottomPopup_Default(id: .random()).present)
+            .onTapGesture(perform: BottomPopup_Default(id: .random).present)
     }
 }

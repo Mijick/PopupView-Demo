@@ -19,7 +19,7 @@ extension String {
     }
 }
 extension String {
-    static func random() -> String {
+    static var random: String {
         let digits = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
         return String(Array(0..<100).map { _ in digits.randomElement()! })
     }

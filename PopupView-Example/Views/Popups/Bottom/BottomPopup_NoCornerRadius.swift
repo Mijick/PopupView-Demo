@@ -70,7 +70,7 @@ private extension BottomPopup_NoCornerRadius {
             .foregroundColor(.white)
             .background(Color.onBackgroundPrimary)
             .mask(Rectangle())
-            .onTapGesture(perform: Self(id: .random()).present)
+            .onTapGesture(perform: Self(id: .random).present)
     }
 }
 

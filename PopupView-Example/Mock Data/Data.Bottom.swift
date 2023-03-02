@@ -9,11 +9,11 @@
 
 
 import Foundation
+import PopupView
 
 extension Data {
     enum Bottom: String, MockData { case fileAdded, noCornerRadius, noSafeArea, `default`, privacyInfo }
 }
-
 extension Data.Bottom {
     var title: String {
         switch self {
@@ -31,6 +31,15 @@ extension Data.Bottom {
             case .noSafeArea: return "No safe area; useful in some interface styles"
             case .default: return "Default interface style"
             case .privacyInfo: return "Smaller popup that opens a website within the app"
+        }
+    }
+    var popup: any Popup {
+        switch self {
+            case .fileAdded: return BottomPopup_FileAdded()
+            case .noCornerRadius: return BottomPopup_NoCornerRadius(id: .random)
+            case .noSafeArea: return BottomPopup_NoSafeArea(id: .random)
+            case .default: return BottomPopup_Default(id: .random)
+            case .privacyInfo: return BottomPopup_PrivacyInfo()
         }
     }
 }

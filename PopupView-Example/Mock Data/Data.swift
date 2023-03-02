@@ -9,11 +9,13 @@
 
 
 import SwiftUI
+import PopupView
 
 enum Data {}
 protocol MockData: RawRepresentable<String>, CaseIterable {
     var title: String { get }
     var description: String { get }
+    var popup: any Popup { get }
 }
 extension MockData {
     var image: String { "placeholder-\(String(describing: Self.self).lowercased())-\(rawValue.camelCaseToKebabCase())" }

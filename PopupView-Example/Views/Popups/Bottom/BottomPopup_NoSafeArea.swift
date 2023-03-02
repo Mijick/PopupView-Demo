@@ -60,6 +60,6 @@ private extension BottomPopup_NoSafeArea {
             .padding(.bottom, UIScreen.safeArea.bottom)
             .frame(width: UIScreen.width)
             .background(Color.primary)
-            .onTapGesture(perform: BottomPopup_NoSafeArea(id: .random()).present)
+            .onTapGesture(perform: BottomPopup_NoSafeArea(id: .random).present)
     }
 }
