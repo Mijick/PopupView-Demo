@@ -20,9 +20,9 @@ struct CentrePopup_UnlockNewFeatures: CentrePopup {
             createIllustration()
             Spacer.height(12)
             createTitle()
-            Spacer.height(16)
+            Spacer.height(12)
             createDescription()
-            Spacer.height(32)
+            Spacer.height(28)
             createButtons()
         }
         .padding(.top, 12)
@@ -39,14 +39,14 @@ private extension CentrePopup_UnlockNewFeatures {
     }
     func createTitle() -> some View {
         Text("Unlock New Features")
-            .font(.satoshiBlack(22))
+            .font(.satoshiBlack(19))
             .foregroundColor(.onBackgroundPrimary)
             .multilineTextAlignment(.center)
             .fixedSize(horizontal: false, vertical: true)
     }
     func createDescription() -> some View {
         Text("Proident adipisicing labore consectetur tempor eiusmod ullamco enim adipisicing eiusmod.")
-            .font(.openSansRegular(15.5))
+            .font(.openSansRegular(14))
             .foregroundColor(.onBackgroundSecondary)
             .multilineTextAlignment(.center)
             .fixedSize(horizontal: false, vertical: true)
@@ -61,24 +61,26 @@ private extension CentrePopup_UnlockNewFeatures {
 
 private extension CentrePopup_UnlockNewFeatures {
     func createCancelButton() -> some View {
-        Text("Cancel")
-            .font(.satoshiBold(15))
-            .foregroundColor(.onBackgroundSecondary)
-            .frame(height: 48)
-            .frame(maxWidth: .infinity)
-            .background(Color.onBackgroundTertiary)
-            .cornerRadius(8)
-            .onTapGesture(perform: dismiss)
+        Button(action: dismiss) {
+            Text("Cancel")
+                .font(.satoshiBold(14))
+                .foregroundColor(.onBackgroundSecondary)
+                .frame(height: 46)
+                .frame(maxWidth: .infinity)
+                .background(Color.onBackgroundTertiary)
+                .cornerRadius(8)
+        }
     }
     func createUnlockButton() -> some View {
-        Text("Unlock")
-            .font(.satoshiBold(15))
-            .foregroundColor(.white)
-            .frame(height: 48)
-            .frame(maxWidth: .infinity)
-            .background(Color.onBackgroundPrimary)
-            .cornerRadius(8)
-            .onTapGesture(perform: CentrePopup_MoreFeatures().present)
+        Button(action: CentrePopup_MoreFeatures().present) {
+            Text("Unlock")
+                .font(.satoshiBold(14))
+                .foregroundColor(.white)
+                .frame(height: 46)
+                .frame(maxWidth: .infinity)
+                .background(Color.onBackgroundPrimary)
+                .cornerRadius(8)
+        }
     }
 }
 

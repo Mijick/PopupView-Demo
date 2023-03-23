@@ -51,13 +51,14 @@ private extension BottomPopup_Default {
             .fixedSize(horizontal: false, vertical: true)
     }
     func createButton() -> some View {
-        Text("Unlock")
-            .font(.satoshiBold(15))
-            .foregroundColor(.white)
-            .padding(.vertical, 14)
-            .frame(maxWidth: .infinity)
-            .background(Color.onBackgroundPrimary)
-            .cornerRadius(8)
-            .onTapGesture(perform: BottomPopup_Default(id: .random).present)
+        Button(action: Self(id: .random).present) {
+            Text("Unlock")
+                .font(.satoshiBold(15))
+                .foregroundColor(.white)
+                .padding(.vertical, 16)
+                .frame(maxWidth: .infinity)
+                .background(Color.onBackgroundPrimary)
+                .cornerRadius(8)
+        }
     }
 }

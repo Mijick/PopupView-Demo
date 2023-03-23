@@ -37,7 +37,7 @@ struct BottomPopup_NoCornerRadius: BottomPopup {
 private extension BottomPopup_NoCornerRadius {
     func createTitle() -> some View {
         Text("Do you want to see another popup?")
-            .font(.spaceGrotesk(23))
+            .font(.spaceGrotesk(22))
             .foregroundColor(.onBackgroundPrimary)
             .multilineTextAlignment(.leading)
             .fixedSize(horizontal: false, vertical: true)
@@ -60,26 +60,27 @@ private extension BottomPopup_NoCornerRadius {
 private extension BottomPopup_NoCornerRadius {
     func createCancelButton() -> some View {
         Button(action: dismiss) {
-            buttonDefault("Cancel")
+            buttonLabel("Cancel")
                 .foregroundColor(.onBackgroundPrimary)
                 .border(Color.onBackgroundPrimary)
         }
     }
     func createShowButton() -> some View {
-        buttonDefault("Show")
-            .foregroundColor(.white)
-            .background(Color.onBackgroundPrimary)
-            .mask(Rectangle())
-            .onTapGesture(perform: Self(id: .random).present)
+        Button(action: Self(id: .random).present) {
+            buttonLabel("Show")
+                .foregroundColor(.white)
+                .background(Color.onBackgroundPrimary)
+                .mask(Rectangle())
+        }
     }
 }
 
 // MARK: -Button
 fileprivate extension View {
-    func buttonDefault(_ text: String) -> some View {
+    func buttonLabel(_ text: String) -> some View {
         Text(text.uppercased())
-            .font(.spaceGrotesk(14.5))
-            .padding(.vertical, 14)
+            .font(.spaceGrotesk(14))
+            .padding(.vertical, 13)
             .frame(maxWidth: .infinity)
     }
 }

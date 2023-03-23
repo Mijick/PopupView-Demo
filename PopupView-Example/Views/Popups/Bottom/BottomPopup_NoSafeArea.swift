@@ -26,7 +26,7 @@ struct BottomPopup_NoSafeArea: BottomPopup {
             createTitle()
             Spacer.height(12)
             createDescription()
-            Spacer.height(32)
+            Spacer.height(28)
             createButton()
         }
         .padding(.top, 32)
@@ -36,7 +36,7 @@ struct BottomPopup_NoSafeArea: BottomPopup {
 private extension BottomPopup_NoSafeArea {
     func createTitle() -> some View {
         Text("Customisation options are almost* endless")
-            .font(.spaceGrotesk(24))
+            .font(.spaceGrotesk(22))
             .foregroundColor(.onBackgroundPrimary)
             .multilineTextAlignment(.leading)
             .padding(.leading, 28)
@@ -45,7 +45,7 @@ private extension BottomPopup_NoSafeArea {
     }
     func createDescription() -> some View {
         Text("Proident adipisicing labore consectetur tempor eiusmod ullamco enim adipisicing eiusmod.")
-            .font(.openSansRegular(15))
+            .font(.openSansRegular(14.5))
             .foregroundColor(.onBackgroundSecondary)
             .multilineTextAlignment(.leading)
             .padding(.leading, 28)
@@ -53,13 +53,14 @@ private extension BottomPopup_NoSafeArea {
             .fixedSize(horizontal: false, vertical: true)
     }
     func createButton() -> some View {
-        Text("Show".uppercased())
-            .font(.spaceGrotesk(15))
-            .foregroundColor(.white)
-            .padding(.top, 20)
-            .padding(.bottom, UIScreen.safeArea.bottom + 4)
-            .frame(width: UIScreen.width)
-            .background(Color.primary)
-            .onTapGesture(perform: BottomPopup_NoSafeArea(id: .random).present)
+        Button(action: Self(id: .random).present) {
+            Text("Show".uppercased())
+                .font(.spaceGrotesk(14.5))
+                .foregroundColor(.white)
+                .padding(.top, 20)
+                .padding(.bottom, UIScreen.safeArea.bottom + 4)
+                .frame(width: UIScreen.width)
+                .background(Color.primary)
+        }
     }
 }

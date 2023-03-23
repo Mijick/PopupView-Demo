@@ -20,7 +20,7 @@ struct CentrePopup_MoreFeatures: CentrePopup {
             createIllustration()
             Spacer.height(12)
             createTitle()
-            Spacer.height(16)
+            Spacer.height(12)
             createDescription()
             Spacer.height(32)
             createButton()
@@ -39,27 +39,28 @@ private extension CentrePopup_MoreFeatures {
     }
     func createTitle() -> some View {
         Text("More Features")
-            .font(.satoshiBlack(22))
+            .font(.satoshiBlack(19))
             .foregroundColor(.onBackgroundPrimary)
             .multilineTextAlignment(.center)
             .fixedSize(horizontal: false, vertical: true)
     }
     func createDescription() -> some View {
         Text("Esse anim aliqua cupidatat sint ea et id ea voluptate.")
-            .font(.openSansRegular(15.5))
+            .font(.openSansRegular(14))
             .foregroundColor(.onBackgroundSecondary)
             .multilineTextAlignment(.center)
             .fixedSize(horizontal: false, vertical: true)
     }
     func createButton() -> some View {
-        Text("Back")
-            .font(.satoshiBold(15))
-            .foregroundColor(.onBackgroundSecondary)
-            .frame(height: 48)
-            .frame(maxWidth: .infinity)
-            .background(Color.onBackgroundTertiary)
-            .cornerRadius(8)
-            .onTapGesture(perform: dismiss)
+        Button(action: dismiss) {
+            Text("Back")
+                .font(.satoshiBold(14))
+                .foregroundColor(.onBackgroundSecondary)
+                .frame(height: 46)
+                .frame(maxWidth: .infinity)
+                .background(Color.onBackgroundTertiary)
+                .cornerRadius(8)
+        }
     }
 }
 

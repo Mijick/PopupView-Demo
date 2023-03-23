@@ -39,11 +39,12 @@ private extension TopPopup_Notification {
         }
     }
     func createDismissButton() -> some View {
-        Text("Dismiss".uppercased())
-            .font(.openSansBold(13))
-            .foregroundColor(.primary)
-            .onTapGesture(perform: dismiss)
-            .alignmentGuide(.customAlignment, computeValue: { $0[.leading] })
+        Button(action: dismiss) {
+            Text("Dismiss".uppercased())
+                .font(.openSansBold(13))
+                .foregroundColor(.primary)
+        }
+        .alignmentGuide(.customAlignment, computeValue: { $0[.leading] })
     }
 }
 

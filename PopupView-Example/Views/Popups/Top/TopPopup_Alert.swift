@@ -49,10 +49,11 @@ private extension TopPopup_Alert {
         }
     }
     func createShowNextButton() -> some View {
-        Text("Show next".uppercased())
-            .font(.openSansBold(13))
-            .foregroundColor(.white)
-            .onTapGesture(perform: TopPopup_Alert(id: .random).present)
+        Button(action: Self(id: .random).present) {
+            Text("Show next".uppercased())
+                .font(.openSansBold(12.5))
+                .foregroundColor(.white)
+        }
     }
 }
 

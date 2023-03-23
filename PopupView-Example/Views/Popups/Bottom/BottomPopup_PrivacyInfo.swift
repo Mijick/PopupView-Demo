@@ -91,24 +91,26 @@ private extension BottomPopup_PrivacyInfo {
             .frame(20)
     }
     func createCancelButton() -> some View {
-        Text("Cancel")
-            .font(.interBold(13))
-            .foregroundColor(.onBackgroundSecondary)
-            .frame(height: 44)
-            .frame(maxWidth: .infinity)
-            .background(Color.onBackgroundTertiary)
-            .cornerRadius(8)
-            .onTapGesture(perform: dismiss)
+        Button(action: dismiss) {
+            Text("Cancel")
+                .font(.interBold(13))
+                .foregroundColor(.onBackgroundSecondary)
+                .frame(height: 44)
+                .frame(maxWidth: .infinity)
+                .background(Color.onBackgroundTertiary)
+                .cornerRadius(8)
+        }
     }
     func createConfirmButton() -> some View {
-        Text("Confirm")
-            .font(.interBold(13))
-            .foregroundColor(.white)
-            .frame(height: 44)
-            .frame(maxWidth: .infinity)
-            .background(Color.primary)
-            .cornerRadius(8)
-            .onTapGesture(perform: dismiss)
+        Button(action: dismiss) {
+            Text("Confirm")
+                .font(.interBold(13))
+                .foregroundColor(.white)
+                .frame(height: 44)
+                .frame(maxWidth: .infinity)
+                .background(Color.primary)
+                .cornerRadius(8)
+        }
     }
 }
 

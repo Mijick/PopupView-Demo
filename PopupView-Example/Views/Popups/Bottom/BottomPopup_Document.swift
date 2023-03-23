@@ -22,6 +22,7 @@ struct BottomPopup_Document: BottomPopup {
             createConfirmButton()
         }
         .padding(.top, 20)
+        .padding(.bottom, 8)
     }
 }
 
@@ -36,15 +37,16 @@ private extension BottomPopup_Document {
         WebView(url: "https://icseindia.org/document/sample.pdf").frame(height: UIScreen.height - UIScreen.safeArea.top - 140)
     }
     func createConfirmButton() -> some View {
-        Text("Confirm")
-            .font(.interBold(13))
-            .foregroundColor(.white)
-            .frame(height: 44)
-            .frame(maxWidth: .infinity)
-            .background(Color.primary)
-            .cornerRadius(8)
-            .padding(.horizontal, 28)
-            .onTapGesture(perform: dismiss)
+        Button(action: dismiss) {
+            Text("Confirm")
+                .font(.interBold(13))
+                .foregroundColor(.white)
+                .frame(height: 44)
+                .frame(maxWidth: .infinity)
+                .background(Color.primary)
+                .cornerRadius(8)
+                .padding(.horizontal, 28)
+        }
     }
 }
 
