@@ -28,9 +28,9 @@ struct BottomPopup_NoCornerRadius: BottomPopup {
             Spacer.height(36)
             createButtons()
         }
-        .padding(.top, 36)
-        .padding(.bottom, 4)
-        .padding(.horizontal, 24)
+        .padding(.top, 32)
+        .padding(.bottom, 12)
+        .padding(.horizontal, 28)
     }
 }
 

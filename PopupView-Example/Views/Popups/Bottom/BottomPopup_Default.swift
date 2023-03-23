@@ -26,9 +26,9 @@ struct BottomPopup_Default: BottomPopup {
             Spacer.height(28)
             createButton()
         }
-        .padding(.top, 20)
+        .padding(.top, 16)
         .padding(.bottom, 12)
-        .padding(.horizontal, 40)
+        .padding(.horizontal, 36)
     }
 }
 

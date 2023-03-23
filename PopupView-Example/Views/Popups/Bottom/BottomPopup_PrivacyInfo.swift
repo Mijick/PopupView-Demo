@@ -16,7 +16,7 @@ struct BottomPopup_PrivacyInfo: BottomPopup {
     func createContent() -> some View {
         VStack(alignment: .leading, spacing: 0) {
             createBar()
-            Spacer.height(28)
+            Spacer.height(24)
             createTitle()
             Spacer.height(36)
             createDescription()
@@ -26,7 +26,7 @@ struct BottomPopup_PrivacyInfo: BottomPopup {
             createButtons()
         }
         .padding(.top, 20)
-        .padding(.bottom, 4)
+        .padding(.bottom, 12)
         .padding(.horizontal, 28)
     }
 }

@@ -29,7 +29,7 @@ struct BottomPopup_NoSafeArea: BottomPopup {
             Spacer.height(32)
             createButton()
         }
-        .padding(.top, 36)
+        .padding(.top, 32)
     }
 }
 
@@ -39,7 +39,7 @@ private extension BottomPopup_NoSafeArea {
             .font(.spaceGrotesk(24))
             .foregroundColor(.onBackgroundPrimary)
             .multilineTextAlignment(.leading)
-            .padding(.leading, 24)
+            .padding(.leading, 28)
             .padding(.trailing, 32)
             .fixedSize(horizontal: false, vertical: true)
     }
@@ -48,7 +48,7 @@ private extension BottomPopup_NoSafeArea {
             .font(.openSansRegular(15))
             .foregroundColor(.onBackgroundSecondary)
             .multilineTextAlignment(.leading)
-            .padding(.leading, 24)
+            .padding(.leading, 28)
             .padding(.trailing, 48)
             .fixedSize(horizontal: false, vertical: true)
     }
@@ -57,7 +57,7 @@ private extension BottomPopup_NoSafeArea {
             .font(.spaceGrotesk(15))
             .foregroundColor(.white)
             .padding(.top, 20)
-            .padding(.bottom, UIScreen.safeArea.bottom)
+            .padding(.bottom, UIScreen.safeArea.bottom + 4)
             .frame(width: UIScreen.width)
             .background(Color.primary)
             .onTapGesture(perform: BottomPopup_NoSafeArea(id: .random).present)
