@@ -10,10 +10,9 @@
 
 import SwiftUI
 import PopupView
-import WebKit
 
 struct BottomPopup_Document: BottomPopup {
-    func configurePopup(popup: BottomPopupConfig) -> BottomPopupConfig { popup }
+    func configurePopup(popup: BottomPopupConfig) -> BottomPopupConfig { popup.contentFillsWholeHeigh(true) }
     func createContent() -> some View {
         VStack(spacing: 0) {
             createBar()
@@ -34,7 +33,7 @@ private extension BottomPopup_Document {
             .alignHorizontally(.center)
     }
     func createWebView() -> some View {
-        WebView(url: "https://icseindia.org/document/sample.pdf").frame(height: UIScreen.height - UIScreen.safeArea.top - 140)
+        Rectangle().fill(Color.white)
     }
     func createConfirmButton() -> some View {
         Button(action: dismiss) {
@@ -52,28 +51,4 @@ private extension BottomPopup_Document {
 
 extension BottomPopup_Document {
     var id: String { "document" }
-}
-
-
-// MARK: -WebView
-fileprivate struct WebView: UIViewRepresentable {
-    let url: String
-
-
-    func makeUIView(context: UIViewRepresentableContext<WebView>) -> WKWebView {
-        let webView = WKWebView()
-        loadRequest(webView)
-        return webView
-    }
-    func updateUIView(_ uiView: WKWebView, context: UIViewRepresentableContext<WebView>) {}
-}
-
-private extension WebView {
-    func loadRequest(_ webView: WKWebView) {
-        if let url = URL(string: url) {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                webView.load(URLRequest(url: url))
-            }
-        }
-    }
 }
