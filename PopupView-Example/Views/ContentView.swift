@@ -13,7 +13,7 @@ import PopupView
 
 struct ContentView: View {
     var body: some View {
-        ScrollView(showsIndicators: false, content: createContent)
+        ScrollView(showsIndicators: false, content: createContent).preferredColorScheme(.light)
     }
 }
 
