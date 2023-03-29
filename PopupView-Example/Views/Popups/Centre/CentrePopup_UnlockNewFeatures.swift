@@ -13,16 +13,16 @@ import PopupView
 
 struct CentrePopup_UnlockNewFeatures: CentrePopup {
     func configurePopup(popup: CentrePopupConfig) -> CentrePopupConfig {
-        popup.horizontalPadding(32)
+        popup.horizontalPadding(28)
     }
     func createContent() -> some View {
         VStack(spacing: 0) {
             createIllustration()
             Spacer.height(12)
             createTitle()
-            Spacer.height(12)
+            Spacer.height(8)
             createDescription()
-            Spacer.height(28)
+            Spacer.height(32)
             createButtons()
         }
         .padding(.top, 12)
@@ -39,7 +39,7 @@ private extension CentrePopup_UnlockNewFeatures {
     }
     func createTitle() -> some View {
         Text("Unlock New Features")
-            .font(.satoshiBlack(19))
+            .font(.satoshiBlack(18))
             .foregroundColor(.onBackgroundPrimary)
             .multilineTextAlignment(.center)
             .fixedSize(horizontal: false, vertical: true)

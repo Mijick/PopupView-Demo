@@ -13,14 +13,14 @@ import PopupView
 
 struct CentrePopup_MoreFeatures: CentrePopup {
     func configurePopup(popup: CentrePopupConfig) -> CentrePopupConfig {
-        popup.horizontalPadding(32)
+        popup.horizontalPadding(28)
     }
     func createContent() -> some View {
         VStack(spacing: 0) {
             createIllustration()
             Spacer.height(12)
             createTitle()
-            Spacer.height(12)
+            Spacer.height(8)
             createDescription()
             Spacer.height(32)
             createButton()
@@ -39,7 +39,7 @@ private extension CentrePopup_MoreFeatures {
     }
     func createTitle() -> some View {
         Text("More Features")
-            .font(.satoshiBlack(19))
+            .font(.satoshiBlack(18))
             .foregroundColor(.onBackgroundPrimary)
             .multilineTextAlignment(.center)
             .fixedSize(horizontal: false, vertical: true)
