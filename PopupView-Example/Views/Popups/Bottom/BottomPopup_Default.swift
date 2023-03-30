@@ -19,16 +19,16 @@ struct BottomPopup_Default: BottomPopup {
     func createContent() -> some View {
         VStack(spacing: 0) {
             createIllustration()
-            Spacer.height(20)
+            Spacer.height(16)
             createTitle()
-            Spacer.height(12)
+            Spacer.height(8)
             createDescription()
-            Spacer.height(28)
+            Spacer.height(24)
             createButton()
         }
-        .padding(.top, 16)
-        .padding(.bottom, 12)
-        .padding(.horizontal, 36)
+        .padding(.top, 12)
+        .padding(.bottom, 4)
+        .padding(.horizontal, 28)
     }
 }
 
@@ -36,29 +36,30 @@ private extension BottomPopup_Default {
     func createIllustration() -> some View {
         Image("grad-1")
             .resizable()
-            .frame(132)
+            .frame(120)
     }
     func createTitle() -> some View {
         Text("Free Ride?")
-            .font(.spaceGrotesk(24))
+            .font(.spaceGrotesk(22))
             .foregroundColor(.onBackgroundPrimary)
     }
     func createDescription() -> some View {
-        Text("Elit qui cupidatat deserunt do in amet eiusmod aute in officia do irure.")
-            .font(.openSansRegular(15))
+        Text("Mollit in nisi eiusmod enim enim proident id occaecat sunt est nulla. Nisi nisi dolor consectetur dolore pariatur.")
+            .font(.openSansRegular(14.5))
             .foregroundColor(.onBackgroundSecondary)
             .multilineTextAlignment(.center)
+            .padding(.horizontal, 8)
             .fixedSize(horizontal: false, vertical: true)
     }
     func createButton() -> some View {
         Button(action: Self(id: .random).present) {
             Text("Unlock")
-                .font(.satoshiBold(15))
+                .font(.satoshiBold(14.5))
                 .foregroundColor(.white)
-                .padding(.vertical, 16)
+                .padding(.vertical, 14)
                 .frame(maxWidth: .infinity)
                 .background(Color.onBackgroundPrimary)
-                .cornerRadius(8)
+                .mask(Capsule())
         }
     }
 }

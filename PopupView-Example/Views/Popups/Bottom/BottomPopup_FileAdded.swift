@@ -12,7 +12,7 @@ import SwiftUI
 import PopupView
 
 struct BottomPopup_FileAdded: BottomPopup {
-    func configurePopup(popup: PopupView.BottomPopupConfig) -> PopupView.BottomPopupConfig {
+    func configurePopup(popup: BottomPopupConfig) -> BottomPopupConfig {
         popup
             .horizontalPadding(20)
             .bottomPadding(UIScreen.safeArea.bottom + 8)
