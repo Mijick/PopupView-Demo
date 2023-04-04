@@ -68,10 +68,6 @@ private extension TopPopup_Notification {
     }
 }
 
-extension TopPopup_Notification {
-    var id: String { "notification" }
-}
-
 
 // MARK: -Alignment Helper
 fileprivate extension HorizontalAlignment {

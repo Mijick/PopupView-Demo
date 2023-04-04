@@ -48,7 +48,3 @@ private extension BottomPopup_Document {
         }
     }
 }
-
-extension BottomPopup_Document {
-    var id: String { "document" }
-}

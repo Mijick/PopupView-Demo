@@ -12,7 +12,6 @@ import SwiftUI
 import PopupView
 
 struct BottomPopup_PrivacyInfo: BottomPopup {
-    func configurePopup(popup: BottomPopupConfig) -> BottomPopupConfig { popup }
     func createContent() -> some View {
         VStack(alignment: .leading, spacing: 0) {
             createBar()
@@ -112,8 +111,4 @@ private extension BottomPopup_PrivacyInfo {
                 .cornerRadius(8)
         }
     }
-}
-
-extension BottomPopup_PrivacyInfo {
-    var id: String { "privacy-info" }
 }

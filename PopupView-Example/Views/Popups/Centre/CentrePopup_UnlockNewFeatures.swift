@@ -83,7 +83,3 @@ private extension CentrePopup_UnlockNewFeatures {
         }
     }
 }
-
-extension CentrePopup_UnlockNewFeatures {
-    var id: String { "unlock-new-features" }
-}

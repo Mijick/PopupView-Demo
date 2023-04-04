@@ -63,7 +63,3 @@ private extension CentrePopup_MoreFeatures {
         }
     }
 }
-
-extension CentrePopup_MoreFeatures {
-    var id: String { "more-features" }
-}

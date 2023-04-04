@@ -63,7 +63,3 @@ private extension BottomPopup_FileAdded {
             .foregroundColor(.onBackgroundSecondary)
     }
 }
-
-extension BottomPopup_FileAdded {
-    var id: String { "file-added" }
-}

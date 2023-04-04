@@ -15,7 +15,6 @@ struct BottomPopup_Default: BottomPopup {
     let id: String
 
 
-    func configurePopup(popup: BottomPopupConfig) -> BottomPopupConfig { popup }
     func createContent() -> some View {
         VStack(spacing: 0) {
             createIllustration()
