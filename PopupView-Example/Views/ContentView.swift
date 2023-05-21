@@ -101,7 +101,7 @@ fileprivate struct Item: View {
         .padding(.horizontal, 16)
         .background(Color.onBackgroundTertiary)
         .cornerRadius(8)
-        .onTapGesture(perform: data.popup.present)
+        .onTapGesture(perform: data.popup.showAndStack)
     }
 }
 

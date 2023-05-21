@@ -17,7 +17,7 @@ struct BottomPopup_FileAdded: BottomPopup {
             .horizontalPadding(20)
             .bottomPadding(UIScreen.safeArea.bottom + 8)
             .activePopupCornerRadius(16)
-            .stackedPopupsCornerRadius(4)
+            .stackCornerRadius(4)
     }
     func createContent() -> some View {
         HStack(spacing: 0) {

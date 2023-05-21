@@ -19,7 +19,7 @@ struct BottomPopup_NoSafeArea: BottomPopup {
         popup
             .contentIgnoresSafeArea(true)
             .activePopupCornerRadius(0)
-            .stackedPopupsCornerRadius(0)
+            .stackCornerRadius(0)
     }
     func createContent() -> some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -53,7 +53,7 @@ private extension BottomPopup_NoSafeArea {
             .fixedSize(horizontal: false, vertical: true)
     }
     func createButton() -> some View {
-        Button(action: Self(id: .random).present) {
+        Button(action: Self(id: .random).showAndStack) {
             Text("Show".uppercased())
                 .font(.spaceGrotesk(14.5))
                 .foregroundColor(.white)

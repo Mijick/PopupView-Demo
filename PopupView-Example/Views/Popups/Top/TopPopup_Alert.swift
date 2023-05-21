@@ -19,7 +19,7 @@ struct TopPopup_Alert: TopPopup {
         popup
             .backgroundColour(.primary)
             .activePopupCornerRadius(0)
-            .stackedPopupsCornerRadius(0)
+            .stackCornerRadius(0)
     }
     func createContent() -> some View {
         HStack(spacing: 0) {
@@ -49,7 +49,7 @@ private extension TopPopup_Alert {
         }
     }
     func createShowNextButton() -> some View {
-        Button(action: Self(id: .random).present) {
+        Button(action: Self(id: .random).showAndStack) {
             Text("Show next".uppercased())
                 .font(.openSansBold(12.5))
                 .foregroundColor(.white)

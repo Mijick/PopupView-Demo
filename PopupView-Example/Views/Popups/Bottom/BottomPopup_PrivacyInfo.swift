@@ -61,7 +61,7 @@ private extension BottomPopup_PrivacyInfo {
         .padding(.horizontal, 16)
         .background(Color.onBackgroundTertiary)
         .cornerRadius(8)
-        .onTapGesture(perform: BottomPopup_Document().present)
+        .onTapGesture(perform: BottomPopup_Document().showAndStack)
     }
     func createButtons() -> some View {
         HStack(spacing: 8) {
