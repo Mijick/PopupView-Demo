@@ -42,6 +42,7 @@
 		6DC8D38529AEC7D7005FF18C /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6DC8D37B29AEC7D7005FF18C /* OpenSans-Regular.ttf */; };
 		6DC8D38929AEC7D7005FF18C /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6DC8D37F29AEC7D7005FF18C /* OpenSans-Bold.ttf */; };
 		6DC8D39229AEC7F4005FF18C /* SpaceGrotesk-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6DC8D38D29AEC7F4005FF18C /* SpaceGrotesk-Bold.ttf */; };
+		6DEECDD52A240CA20048BEC4 /* BottomPopup_Fullscreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEECDD42A240CA20048BEC4 /* BottomPopup_Fullscreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		6DC8D37F29AEC7D7005FF18C /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		6DC8D38D29AEC7F4005FF18C /* SpaceGrotesk-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpaceGrotesk-Bold.ttf"; sourceTree = "<group>"; };
 		6DC8D39729AEC80E005FF18C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6DEECDD42A240CA20048BEC4 /* BottomPopup_Fullscreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomPopup_Fullscreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +199,7 @@
 				6DA1411429AF6C8600A3DC0A /* BottomPopup_Default.swift */,
 				6DA1411629AF6C9100A3DC0A /* BottomPopup_PrivacyInfo.swift */,
 				6DA1411829AF6C9B00A3DC0A /* BottomPopup_Document.swift */,
+				6DEECDD42A240CA20048BEC4 /* BottomPopup_Fullscreen.swift */,
 			);
 			path = Bottom;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				6D4C04B829AECCEA00165FC2 /* Font++.swift in Sources */,
 				6D4C04BC29AED11E00165FC2 /* UIScreen++.swift in Sources */,
 				6D4C04C429AEDBEC00165FC2 /* BottomPopup_NoSafeArea.swift in Sources */,
+				6DEECDD52A240CA20048BEC4 /* BottomPopup_Fullscreen.swift in Sources */,
 				6DA1411B29AF720C00A3DC0A /* View++.swift in Sources */,
 				6DB39EDA29B030FE0024677D /* Data.Bottom.swift in Sources */,
 				6DB39EDE29B0310D0024677D /* Data.Top.swift in Sources */,
