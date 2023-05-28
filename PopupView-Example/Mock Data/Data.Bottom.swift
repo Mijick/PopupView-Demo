@@ -12,7 +12,7 @@ import Foundation
 import PopupView
 
 extension Data {
-    enum Bottom: String, MockData { case fileAdded, editExpense, noCornerRadius, noSafeArea, `default`, privacyInfo }
+    enum Bottom: String, MockData { case fileAdded, editExpense, noCornerRadius, noSafeArea, `default`, privacyInfo, fullscreen }
 }
 extension Data.Bottom {
     var title: String {
@@ -23,6 +23,7 @@ extension Data.Bottom {
             case .noSafeArea: return "No Safe Area"
             case .default: return "Default"
             case .privacyInfo: return "Smaller - Bigger"
+            case .fullscreen: return "Full Screen"
         }
     }
     var description: String {
@@ -33,6 +34,7 @@ extension Data.Bottom {
             case .noSafeArea: return "No safe area; useful in some interface styles"
             case .default: return "Default interface style"
             case .privacyInfo: return "Smaller popup that opens a website within the app"
+            case .fullscreen: return "Popup that fills the entire screen"
         }
     }
     var popup: any Popup {
@@ -43,6 +45,7 @@ extension Data.Bottom {
             case .noSafeArea: return BottomPopup_NoSafeArea(id: .random)
             case .default: return BottomPopup_Default(id: .random)
             case .privacyInfo: return BottomPopup_PrivacyInfo()
+            case .fullscreen: return BottomPopup_Fullscreen()
         }
     }
 }
