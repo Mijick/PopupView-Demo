@@ -15,6 +15,7 @@ struct BottomPopup_EditExpense: BottomPopup {
     @State private var note: String = ""
 
 
+    func configurePopup(popup: BottomPopupConfig) -> BottomPopupConfig { popup.distanceFromKeyboard(12) }
     func createContent() -> some View {
         VStack(spacing: 0) {
             createTopView()
