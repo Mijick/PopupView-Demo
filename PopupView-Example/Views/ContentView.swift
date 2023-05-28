@@ -24,7 +24,7 @@ private extension ContentView {
             createSection(Data.Centre.self)
             createSection(Data.Top.self)
         }
-        .padding(.top, 32)
+        .padding(.top, 40)
         .padding(.bottom, 32)
         .padding(.horizontal, 28)
     }
