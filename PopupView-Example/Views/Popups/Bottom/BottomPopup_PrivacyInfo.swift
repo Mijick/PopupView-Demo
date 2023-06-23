@@ -50,18 +50,19 @@ private extension BottomPopup_PrivacyInfo {
             .fixedSize(horizontal: false, vertical: true)
     }
     func createTapToViewButton() -> some View {
-        HStack(spacing: 0) {
-            createTapToViewButtonLeftIcon()
-            Spacer.width(16)
-            createTapToViewButtonText()
-            Spacer()
-            createTapToViewButtonRightIcon()
+        Button(action: BottomPopup_Document().showAndStack) {
+            HStack(spacing: 0) {
+                createTapToViewButtonLeftIcon()
+                Spacer.width(16)
+                createTapToViewButtonText()
+                Spacer()
+                createTapToViewButtonRightIcon()
+            }
+            .padding(.vertical, 20)
+            .padding(.horizontal, 16)
+            .background(Color.onBackgroundTertiary)
+            .cornerRadius(8)
         }
-        .padding(.vertical, 20)
-        .padding(.horizontal, 16)
-        .background(Color.onBackgroundTertiary)
-        .cornerRadius(8)
-        .onTapGesture(perform: BottomPopup_Document().showAndStack)
     }
     func createButtons() -> some View {
         HStack(spacing: 8) {

@@ -90,18 +90,19 @@ fileprivate struct Item: View {
 
 
     var body: some View {
-        HStack(spacing: 0) {
-            createIcon()
-            Spacer.width(12)
-            createText()
-            Spacer()
-            createRightArrow()
+        Button(action: data.popup.showAndStack) {
+            HStack(spacing: 0) {
+                createIcon()
+                Spacer.width(12)
+                createText()
+                Spacer()
+                createRightArrow()
+            }
+            .padding(.vertical, 14)
+            .padding(.horizontal, 16)
+            .background(Color.onBackgroundTertiary)
+            .cornerRadius(8)
         }
-        .padding(.vertical, 14)
-        .padding(.horizontal, 16)
-        .background(Color.onBackgroundTertiary)
-        .cornerRadius(8)
-        .onTapGesture(perform: data.popup.showAndStack)
     }
 }
 
