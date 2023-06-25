@@ -12,9 +12,6 @@ import SwiftUI
 import PopupView
 
 struct TopPopup_Alert: TopPopup {
-    let id: String
-
-
     func configurePopup(popup: TopPopupConfig) -> TopPopupConfig {
         popup
             .backgroundColour(.primary)
@@ -48,7 +45,7 @@ private extension TopPopup_Alert {
         }
     }
     func createShowNextButton() -> some View {
-        Button(action: Self(id: .random).showAndStack) {
+        Button(action: TopPopup_Notification().showAndStack) {
             Text("Show next".uppercased())
                 .font(.openSansBold(12.5))
                 .foregroundColor(.white)

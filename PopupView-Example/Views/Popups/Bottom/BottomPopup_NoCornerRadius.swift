@@ -12,9 +12,6 @@ import SwiftUI
 import PopupView
 
 struct BottomPopup_NoCornerRadius: BottomPopup {
-    let id: String
-
-
     func configurePopup(popup: PopupView.BottomPopupConfig) -> PopupView.BottomPopupConfig { popup.cornerRadius(0) }
     func createContent() -> some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -62,7 +59,7 @@ private extension BottomPopup_NoCornerRadius {
         }
     }
     func createShowButton() -> some View {
-        Button(action: Self(id: .random).showAndStack) {
+        Button(action: BottomPopup_Default().showAndStack) {
             buttonLabel("Show")
                 .foregroundColor(.white)
                 .background(Color.onBackgroundPrimary)

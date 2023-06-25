@@ -12,9 +12,6 @@ import SwiftUI
 import PopupView
 
 struct BottomPopup_Default: BottomPopup {
-    let id: String
-
-
     func createContent() -> some View {
         VStack(spacing: 0) {
             createIllustration()
@@ -51,7 +48,7 @@ private extension BottomPopup_Default {
             .fixedSize(horizontal: false, vertical: true)
     }
     func createButton() -> some View {
-        Button(action: Self(id: .random).showAndStack) {
+        Button(action: BottomPopup_PrivacyInfo().showAndStack) {
             Text("Unlock")
                 .font(.satoshiBold(14.5))
                 .foregroundColor(.white)

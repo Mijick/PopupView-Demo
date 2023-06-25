@@ -41,9 +41,9 @@ extension Data.Bottom {
         switch self {
             case .fileAdded: return BottomPopup_FileAdded()
             case .editExpense: return BottomPopup_EditExpense()
-            case .noCornerRadius: return BottomPopup_NoCornerRadius(id: .random)
-            case .noSafeArea: return BottomPopup_NoSafeArea(id: .random)
-            case .default: return BottomPopup_Default(id: .random)
+            case .noCornerRadius: return BottomPopup_NoCornerRadius()
+            case .noSafeArea: return BottomPopup_NoSafeArea()
+            case .default: return BottomPopup_Default()
             case .privacyInfo: return BottomPopup_PrivacyInfo()
             case .fullscreen: return BottomPopup_Fullscreen()
         }
