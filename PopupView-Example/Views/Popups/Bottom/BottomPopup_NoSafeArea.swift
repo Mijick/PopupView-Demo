@@ -18,8 +18,7 @@ struct BottomPopup_NoSafeArea: BottomPopup {
     func configurePopup(popup: BottomPopupConfig) -> BottomPopupConfig {
         popup
             .contentIgnoresSafeArea(true)
-            .activePopupCornerRadius(0)
-            .stackCornerRadius(0)
+            .cornerRadius(0)
     }
     func createContent() -> some View {
         VStack(alignment: .leading, spacing: 0) {

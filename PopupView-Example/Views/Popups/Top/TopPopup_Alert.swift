@@ -18,8 +18,7 @@ struct TopPopup_Alert: TopPopup {
     func configurePopup(popup: TopPopupConfig) -> TopPopupConfig {
         popup
             .backgroundColour(.primary)
-            .activePopupCornerRadius(0)
-            .stackCornerRadius(0)
+            .cornerRadius(0)
     }
     func createContent() -> some View {
         HStack(spacing: 0) {

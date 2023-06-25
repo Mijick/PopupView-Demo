@@ -15,11 +15,7 @@ struct BottomPopup_NoCornerRadius: BottomPopup {
     let id: String
 
 
-    func configurePopup(popup: PopupView.BottomPopupConfig) -> PopupView.BottomPopupConfig {
-        popup
-            .activePopupCornerRadius(0)
-            .stackCornerRadius(0)
-    }
+    func configurePopup(popup: PopupView.BottomPopupConfig) -> PopupView.BottomPopupConfig { popup.cornerRadius(0) }
     func createContent() -> some View {
         VStack(alignment: .leading, spacing: 0) {
             createTitle()
