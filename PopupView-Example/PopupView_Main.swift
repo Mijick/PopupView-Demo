@@ -13,6 +13,20 @@ import PopupView
 
 @main struct PopupView_Main: App {
     var body: some Scene {
-        WindowGroup(content: ContentView().implementPopupView)
+        WindowGroup {
+            ContentView()
+                .implementPopupView(configTop: configureTopPopups, configCentre: configureCentrePopups, configBottom: configureBottomPopups)
+        }
+    }
+}
+private extension PopupView_Main {
+    func configureTopPopups(_ config: GlobalConfig.Top) -> GlobalConfig.Top {
+        config.cornerRadius(24)
+    }
+    func configureCentrePopups(_ config: GlobalConfig.Centre) -> GlobalConfig.Centre {
+        config.tapOutsideToDismiss(false)
+    }
+    func configureBottomPopups(_ config: GlobalConfig.Bottom) -> GlobalConfig.Bottom {
+        config.tapOutsideToDismiss(true)
     }
 }
