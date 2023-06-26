@@ -29,7 +29,7 @@ extension Data.Top {
     }
     var popup: any Popup {
         switch self {
-            case .alert: return TopPopup_Alert(id: .random)
+            case .alert: return TopPopup_Alert()
             case .notification: return TopPopup_Notification()
         }
     }

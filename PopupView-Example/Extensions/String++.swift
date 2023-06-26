@@ -18,9 +18,3 @@ extension String {
             .lowercased()
     }
 }
-extension String {
-    static var random: String {
-        let digits = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
-        return String(Array(0..<100).map { _ in digits.randomElement()! })
-    }
-}
