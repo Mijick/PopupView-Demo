@@ -14,12 +14,14 @@ import PopupView
 @main struct PopupView_Main: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .implementPopupView(configTop: configureTopPopups, configCentre: configureCentrePopups, configBottom: configureBottomPopups)
+            ContentView().implementPopupView(configMain: configurePopups, configTop: configureTopPopups, configCentre: configureCentrePopups, configBottom: configureBottomPopups)
         }
     }
 }
 private extension PopupView_Main {
+    func configurePopups(_ config: GlobalConfig.Main) -> GlobalConfig.Main {
+        config.overlayColour(.black.opacity(0.48))
+    }
     func configureTopPopups(_ config: GlobalConfig.Top) -> GlobalConfig.Top {
         config.cornerRadius(24)
     }

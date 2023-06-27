@@ -45,7 +45,7 @@ private extension BottomPopup_Fullscreen {
         .active(if: closeButtonAppeared)
     }
     func createWebView() -> some View {
-        WebView()
+        WebView().active(if: closeButtonAppeared)
     }
 }
 
