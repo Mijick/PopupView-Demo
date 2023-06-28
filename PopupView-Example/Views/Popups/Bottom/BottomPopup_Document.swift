@@ -18,6 +18,7 @@ struct BottomPopup_Document: BottomPopup {
             createBar()
             Spacer.height(24)
             createWebView()
+            Spacer()
             createConfirmButton()
         }
         .padding(.top, 20)
