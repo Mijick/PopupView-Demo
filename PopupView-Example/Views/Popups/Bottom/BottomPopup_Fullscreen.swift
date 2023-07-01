@@ -22,7 +22,7 @@ struct BottomPopup_Fullscreen: BottomPopup {
     }
     func createContent() -> some View {
         VStack(spacing: 0) {
-            Spacer.height(UIScreen.safeArea.top + 12)
+            Spacer.height(Screen.safeArea.top + 12)
             createNavigationBar()
             Spacer.height(16)
             createWebView()
@@ -70,7 +70,7 @@ private extension WebView {
 }
 
 
-#elseif os(tvOS)
+#elseif os(tvOS) || os(macOS)
 fileprivate struct WebView: View {
     var body: some View { EmptyView() }
 }

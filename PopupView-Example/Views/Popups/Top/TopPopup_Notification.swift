@@ -14,7 +14,7 @@ import PopupView
 struct TopPopup_Notification: TopPopup {
     func configurePopup(popup: TopPopupConfig) -> TopPopupConfig {
         popup
-            .topPadding(UIScreen.safeArea.top)
+            .topPadding(Screen.safeArea.top)
             .horizontalPadding(16)
     }
     func createContent() -> some View {
