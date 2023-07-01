@@ -12,12 +12,16 @@ import SwiftUI
 import PopupView
 
 struct BottomPopup_Document: BottomPopup {
-    func configurePopup(popup: BottomPopupConfig) -> BottomPopupConfig { popup.contentFillsWholeHeigh(true) }
+    func configurePopup(popup: BottomPopupConfig) -> BottomPopupConfig {
+        popup
+            .contentFillsWholeHeigh(true)
+            .dragGestureEnabled(false)
+    }
     func createContent() -> some View {
         VStack(spacing: 0) {
             createBar()
             Spacer.height(24)
-            createWebView()
+            createScrollView()
             Spacer()
             createConfirmButton()
         }
@@ -33,8 +37,14 @@ private extension BottomPopup_Document {
             .frame(width: 32, height: 6)
             .alignHorizontally(.center)
     }
-    func createWebView() -> some View {
-        Rectangle().fill(Color.white)
+    func createScrollView() -> some View {
+        ScrollView(showsIndicators: false) {
+            VStack(spacing: 32) {
+                createScrollViewText("Alea")
+                createScrollViewText("Iacta")
+                createScrollViewText("Est")
+            }
+        }
     }
     func createConfirmButton() -> some View {
         Button(action: dismiss) {
@@ -47,5 +57,13 @@ private extension BottomPopup_Document {
                 .cornerRadius(8)
                 .padding(.horizontal, 28)
         }
+    }
+}
+
+private extension BottomPopup_Document {
+    func createScrollViewText(_ text: String) -> some View {
+        Text(text)
+            .font(.interRegular(16))
+            .foregroundColor(.onBackgroundPrimary)
     }
 }
