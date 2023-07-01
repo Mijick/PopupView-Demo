@@ -22,13 +22,13 @@ private extension PopupView_Main {
     func configurePopup(_ config: GlobalConfig) -> GlobalConfig { config
         .top { $0
             .cornerRadius(24)
-            .dragGestureEnabled(false)
+            .dragGestureEnabled(true)
         }
         .centre { $0
             .tapOutsideToDismiss(false)
         }
         .bottom { $0
-            .stackLimit(2)
+            .stackLimit(4)
         }
     }
 }
