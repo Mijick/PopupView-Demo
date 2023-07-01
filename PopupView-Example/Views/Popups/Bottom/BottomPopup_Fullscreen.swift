@@ -9,7 +9,6 @@
 
 
 import SwiftUI
-import WebKit
 import PopupView
 
 struct BottomPopup_Fullscreen: BottomPopup {
@@ -56,7 +55,9 @@ private extension BottomPopup_Fullscreen {
 }
 
 
-// MARK: - WebView implementation
+#if os(iOS)
+import WebKit
+
 fileprivate struct WebView: UIViewRepresentable {
     func makeUIView(context: Context) -> WKWebView { .init() }
     func updateUIView(_ webView: WKWebView, context: Context) {
@@ -67,3 +68,10 @@ fileprivate struct WebView: UIViewRepresentable {
 private extension WebView {
     var url: URL { .init(string: "https://github.com/orgs/Mijick/repositories")! }
 }
+
+
+#elseif os(tvOS)
+fileprivate struct WebView: View {
+    var body: some View { EmptyView() }
+}
+#endif
