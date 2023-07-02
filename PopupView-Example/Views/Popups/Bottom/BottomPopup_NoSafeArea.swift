@@ -54,7 +54,7 @@ private extension BottomPopup_NoSafeArea {
                 .font(.spaceGrotesk(14.5))
                 .foregroundColor(.white)
                 .padding(.top, 20)
-                .padding(.bottom, UIScreen.safeArea.bottom + 4)
+                .padding(.bottom, Screen.safeArea.bottom + 4)
                 .frame(maxWidth: .infinity)
                 .background(Color.primary)
         }

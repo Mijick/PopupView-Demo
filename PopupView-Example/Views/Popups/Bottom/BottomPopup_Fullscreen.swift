@@ -9,7 +9,6 @@
 
 
 import SwiftUI
-import WebKit
 import PopupView
 
 struct BottomPopup_Fullscreen: BottomPopup {
@@ -23,7 +22,7 @@ struct BottomPopup_Fullscreen: BottomPopup {
     }
     func createContent() -> some View {
         VStack(spacing: 0) {
-            Spacer.height(UIScreen.safeArea.top + 12)
+            Spacer.height(Screen.safeArea.top + 12)
             createNavigationBar()
             Spacer.height(16)
             createWebView()
@@ -45,7 +44,7 @@ private extension BottomPopup_Fullscreen {
         .active(if: closeButtonAppeared)
     }
     func createWebView() -> some View {
-        WebView()
+        WebView().active(if: closeButtonAppeared)
     }
 }
 
@@ -56,7 +55,9 @@ private extension BottomPopup_Fullscreen {
 }
 
 
-// MARK: - WebView implementation
+#if os(iOS)
+import WebKit
+
 fileprivate struct WebView: UIViewRepresentable {
     func makeUIView(context: Context) -> WKWebView { .init() }
     func updateUIView(_ webView: WKWebView, context: Context) {
@@ -67,3 +68,10 @@ fileprivate struct WebView: UIViewRepresentable {
 private extension WebView {
     var url: URL { .init(string: "https://github.com/orgs/Mijick/repositories")! }
 }
+
+
+#elseif os(tvOS) || os(macOS)
+fileprivate struct WebView: View {
+    var body: some View { EmptyView() }
+}
+#endif
