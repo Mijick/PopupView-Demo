@@ -150,20 +150,12 @@
 			path = "Mock Data";
 			sourceTree = "<group>";
 		};
-		6DBB5D882AB665F9009A5750 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		6DC0833F29ACA33E0031481C = {
 			isa = PBXGroup;
 			children = (
 				6DC0834A29ACA33E0031481C /* PopupView-Demo */,
-				6D3FD2732A1ADAA8005EF486 /* PopupView */,
 				6DC0834929ACA33E0031481C /* Products */,
-				6DBB5D882AB665F9009A5750 /* Frameworks */,
+				6D3FD2732A1ADAA8005EF486 /* PopupView */,
 			);
 			sourceTree = "<group>";
 		};
@@ -301,7 +293,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
-				LastUpgradeCheck = 1420;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					6DC0834729ACA33E0031481C = {
 						CreatedOnToolsVersion = 14.2;
@@ -421,6 +413,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -481,6 +474,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -508,7 +502,7 @@
 				DEVELOPMENT_TEAM = 78L5993673;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "PopupView-Example/Assets/Info.plist";
+				INFOPLIST_FILE = "PopupView-Demo/Assets/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -538,7 +532,7 @@
 				DEVELOPMENT_TEAM = 78L5993673;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "PopupView-Example/Assets/Info.plist";
+				INFOPLIST_FILE = "PopupView-Demo/Assets/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
