@@ -9,7 +9,7 @@
 
 
 import Foundation
-import PopupView
+import MijickPopupView
 
 extension Data {
     enum Top: String, MockData { case alert, notification }

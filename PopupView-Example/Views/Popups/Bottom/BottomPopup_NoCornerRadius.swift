@@ -9,10 +9,10 @@
 
 
 import SwiftUI
-import PopupView
+import MijickPopupView
 
 struct BottomPopup_NoCornerRadius: BottomPopup {
-    func configurePopup(popup: PopupView.BottomPopupConfig) -> PopupView.BottomPopupConfig { popup.cornerRadius(0) }
+    func configurePopup(popup: BottomPopupConfig) -> BottomPopupConfig { popup.cornerRadius(0) }
     func createContent() -> some View {
         VStack(alignment: .leading, spacing: 0) {
             createTitle()

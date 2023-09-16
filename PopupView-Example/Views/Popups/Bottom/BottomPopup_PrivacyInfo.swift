@@ -9,7 +9,7 @@
 
 
 import SwiftUI
-import PopupView
+import MijickPopupView
 
 struct BottomPopup_PrivacyInfo: BottomPopup {
     func createContent() -> some View {

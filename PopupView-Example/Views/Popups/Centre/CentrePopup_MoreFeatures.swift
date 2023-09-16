@@ -9,7 +9,7 @@
 
 
 import SwiftUI
-import PopupView
+import MijickPopupView
 
 struct CentrePopup_MoreFeatures: CentrePopup {
     func configurePopup(popup: CentrePopupConfig) -> CentrePopupConfig {

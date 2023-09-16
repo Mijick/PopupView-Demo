@@ -9,7 +9,7 @@
 
 
 import SwiftUI
-import PopupView
+import MijickPopupView
 
 struct BottomPopup_Default: BottomPopup {
     func createContent() -> some View {

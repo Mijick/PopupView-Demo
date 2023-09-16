@@ -9,7 +9,7 @@
 
 
 import SwiftUI
-import PopupView
+import MijickPopupView
 
 struct BottomPopup_EditExpense: BottomPopup {
     @State private var note: String = ""

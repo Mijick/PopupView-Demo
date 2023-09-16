@@ -9,7 +9,7 @@
 
 
 import SwiftUI
-import PopupView
+import MijickPopupView
 
 @main struct PopupView_Main: App {
     var body: some Scene {

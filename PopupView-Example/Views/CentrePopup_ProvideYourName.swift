@@ -9,7 +9,7 @@
 
 
 import SwiftUI
-import PopupView
+import MijickPopupView
 
 struct CentrePopup_ProvideYourName: CentrePopup {
     @State private var name: String = ""

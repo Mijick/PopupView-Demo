@@ -9,7 +9,7 @@
 
 
 import Foundation
-import PopupView
+import MijickPopupView
 
 extension Data {
     enum Bottom: String, MockData { case fileAdded, editExpense, noCornerRadius, noSafeArea, `default`, privacyInfo, fullscreen }
