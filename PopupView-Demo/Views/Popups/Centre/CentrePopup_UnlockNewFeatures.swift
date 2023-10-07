@@ -72,7 +72,7 @@ private extension CentrePopup_UnlockNewFeatures {
         }
     }
     func createUnlockButton() -> some View {
-        Button(action: CentrePopup_MoreFeatures().showAndStack) {
+        Button(action: onUnlockButtonTap) {
             Text("Unlock")
                 .font(.satoshiBold(14))
                 .foregroundColor(.white)
@@ -81,5 +81,11 @@ private extension CentrePopup_UnlockNewFeatures {
                 .background(Color.onBackgroundPrimary)
                 .cornerRadius(8)
         }
+    }
+}
+
+private extension CentrePopup_UnlockNewFeatures {
+    func onUnlockButtonTap() {
+        CentrePopup_MoreFeatures().showAndStack()
     }
 }

@@ -90,7 +90,7 @@ fileprivate struct Item: View {
 
 
     var body: some View {
-        Button(action: data.popup.showAndStack) {
+        Button(action: onButtonTap) {
             HStack(spacing: 0) {
                 createIcon()
                 Spacer.width(12)
@@ -136,5 +136,11 @@ private extension Item {
             .foregroundColor(.onBackgroundSecondary)
             .multilineTextAlignment(.leading)
             .fixedSize(horizontal: false, vertical: true)
+    }
+}
+
+private extension Item {
+    func onButtonTap() {
+        data.popup.showAndStack()
     }
 }

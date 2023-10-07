@@ -45,7 +45,7 @@ private extension TopPopup_Alert {
         }
     }
     func createShowNextButton() -> some View {
-        Button(action: TopPopup_Notification().showAndStack) {
+        Button(action: onShowNextButtonTap) {
             Text("Show next".uppercased())
                 .font(.openSansBold(12.5))
                 .foregroundColor(.white)
@@ -65,5 +65,11 @@ private extension TopPopup_Alert {
             .foregroundColor(.white.opacity(0.7))
             .multilineTextAlignment(.leading)
             .fixedSize(horizontal: false, vertical: true)
+    }
+}
+
+private extension TopPopup_Alert {
+    func onShowNextButtonTap() {
+        TopPopup_Notification().showAndStack()
     }
 }

@@ -48,7 +48,7 @@ private extension BottomPopup_Default {
             .fixedSize(horizontal: false, vertical: true)
     }
     func createButton() -> some View {
-        Button(action: BottomPopup_PrivacyInfo().showAndStack) {
+        Button(action: onButtonTap) {
             Text("Unlock")
                 .font(.satoshiBold(14.5))
                 .foregroundColor(.white)
@@ -57,5 +57,11 @@ private extension BottomPopup_Default {
                 .background(Color.onBackgroundPrimary)
                 .mask(Capsule())
         }
+    }
+}
+
+private extension BottomPopup_Default {
+    func onButtonTap() {
+        BottomPopup_PrivacyInfo().showAndStack()
     }
 }
