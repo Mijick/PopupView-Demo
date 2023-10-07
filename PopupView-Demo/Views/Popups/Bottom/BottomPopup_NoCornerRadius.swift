@@ -59,12 +59,18 @@ private extension BottomPopup_NoCornerRadius {
         }
     }
     func createShowButton() -> some View {
-        Button(action: BottomPopup_Default().showAndStack as! () -> Void) {
+        Button(action: onUnlockButtonTap) {
             buttonLabel("Show")
                 .foregroundColor(.white)
                 .background(Color.onBackgroundPrimary)
                 .mask(Rectangle())
         }
+    }
+}
+
+private extension BottomPopup_NoCornerRadius {
+    func onUnlockButtonTap() {
+        BottomPopup_Default().showAndStack()
     }
 }
 
