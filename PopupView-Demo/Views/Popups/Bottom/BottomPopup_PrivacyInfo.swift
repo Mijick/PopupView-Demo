@@ -50,7 +50,7 @@ private extension BottomPopup_PrivacyInfo {
             .fixedSize(horizontal: false, vertical: true)
     }
     func createTapToViewButton() -> some View {
-        Button(action: BottomPopup_Document().showAndStack as! () -> Void) {
+        Button(action: onTapToViewButtonTap) {
             HStack(spacing: 0) {
                 createTapToViewButtonLeftIcon()
                 Spacer.width(16)
@@ -111,5 +111,11 @@ private extension BottomPopup_PrivacyInfo {
                 .background(Color.primary)
                 .cornerRadius(8)
         }
+    }
+}
+
+private extension BottomPopup_PrivacyInfo {
+    func onTapToViewButtonTap() {
+        BottomPopup_Document().showAndStack()
     }
 }
