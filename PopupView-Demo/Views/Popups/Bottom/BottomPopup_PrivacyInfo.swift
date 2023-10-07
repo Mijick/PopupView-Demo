@@ -50,7 +50,7 @@ private extension BottomPopup_PrivacyInfo {
             .fixedSize(horizontal: false, vertical: true)
     }
     func createTapToViewButton() -> some View {
-        Button(action: BottomPopup_Document().showAndStack) {
+        Button(action: BottomPopup_Document().showAndStack as! () -> Void) {
             HStack(spacing: 0) {
                 createTapToViewButtonLeftIcon()
                 Spacer.width(16)

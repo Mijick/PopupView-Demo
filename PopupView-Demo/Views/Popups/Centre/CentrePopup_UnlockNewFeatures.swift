@@ -72,7 +72,7 @@ private extension CentrePopup_UnlockNewFeatures {
         }
     }
     func createUnlockButton() -> some View {
-        Button(action: CentrePopup_MoreFeatures().showAndStack) {
+        Button(action: CentrePopup_MoreFeatures().showAndStack as! () -> Void) {
             Text("Unlock")
                 .font(.satoshiBold(14))
                 .foregroundColor(.white)

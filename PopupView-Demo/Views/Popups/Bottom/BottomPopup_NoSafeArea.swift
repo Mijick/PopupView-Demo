@@ -49,7 +49,7 @@ private extension BottomPopup_NoSafeArea {
             .fixedSize(horizontal: false, vertical: true)
     }
     func createButton() -> some View {
-        Button(action: BottomPopup_NoCornerRadius().showAndStack) {
+        Button(action: BottomPopup_NoCornerRadius().showAndStack as! () -> Void) {
             Text("Show".uppercased())
                 .font(.spaceGrotesk(14.5))
                 .foregroundColor(.white)
