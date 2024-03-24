@@ -513,6 +513,9 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mijick.PopupView-Demo";
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=appletvos*]" = com.mijick.PopupViewDemo;
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = com.mijick.PopupViewDemo;
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=macosx*]" = com.mijick.PopupViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = NO;
@@ -543,6 +546,9 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mijick.PopupView-Demo";
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=appletvos*]" = com.mijick.PopupViewDemo;
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = com.mijick.PopupViewDemo;
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=macosx*]" = com.mijick.PopupViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = NO;
