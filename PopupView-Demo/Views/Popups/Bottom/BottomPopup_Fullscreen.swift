@@ -27,7 +27,7 @@ struct BottomPopup_Fullscreen: BottomPopup {
             Spacer.height(16)
             createWebView()
         }
-        .ignoresSafeArea()
+        .frame(maxHeight: .infinity, alignment: .top)
         .animation(.easeInOut, value: closeButtonAppeared)
         .onAppear(perform: onAppear)
     }
