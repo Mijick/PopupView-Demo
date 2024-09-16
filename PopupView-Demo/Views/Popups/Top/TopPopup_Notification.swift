@@ -9,7 +9,7 @@
 
 
 import SwiftUI
-import MijickPopupView
+import MijickPopups
 
 struct TopPopup_Notification: TopPopup {
     func configurePopup(popup: TopPopupConfig) -> TopPopupConfig {

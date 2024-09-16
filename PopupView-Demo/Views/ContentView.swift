@@ -9,7 +9,7 @@
 
 
 import SwiftUI
-import MijickPopupView
+import MijickPopups
 
 struct ContentView: View {
     var body: some View {

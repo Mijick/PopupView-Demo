@@ -9,7 +9,7 @@
 
 
 import SwiftUI
-import MijickPopupView
+import MijickPopups
 
 @main struct PopupView_Main: App {
     var body: some Scene {
@@ -26,9 +26,6 @@ private extension PopupView_Main {
         }
         .centre { $0
             .tapOutsideToDismiss(false)
-        }
-        .bottom { $0
-            .stackLimit(4)
         }
     }
 }

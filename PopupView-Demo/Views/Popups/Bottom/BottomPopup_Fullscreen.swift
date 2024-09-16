@@ -9,7 +9,7 @@
 
 
 import SwiftUI
-import MijickPopupView
+import MijickPopups
 
 struct BottomPopup_Fullscreen: BottomPopup {
     @State private var closeButtonAppeared: Bool = false
