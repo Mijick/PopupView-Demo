@@ -19,9 +19,8 @@ import MijickPopups
     }
 }
 private extension PopupView_Main {
-    func configurePopup(_ config: GlobalConfig) -> GlobalConfig { config
-        .top { $0
-            .cornerRadius(24)
+    func configurePopup(_ config: ConfigContainer) -> ConfigContainer { config
+        .vertical { $0
             .dragGestureEnabled(true)
         }
         .centre { $0
