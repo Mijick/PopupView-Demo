@@ -49,7 +49,7 @@ private extension BottomPopup_Fullscreen {
 }
 
 private extension BottomPopup_Fullscreen {
-    func onAppear() { DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+    func onAppear() { DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
         closeButtonAppeared = true
     }}
 }
