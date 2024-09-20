@@ -14,7 +14,7 @@ import MijickPopups
 struct BottomPopup_Document: BottomPopup {
     func configurePopup(popup: BottomPopupConfig) -> BottomPopupConfig {
         popup
-            .contentFillsWholeHeigh(true)
+            .changeHeightMode(.large)
             .dragGestureEnabled(false)
     }
     func createContent() -> some View {

@@ -17,7 +17,7 @@ struct BottomPopup_Fullscreen: BottomPopup {
 
     func configurePopup(popup: BottomPopupConfig) -> BottomPopupConfig {
         popup
-            .contentFillsEntireScreen(true)
+            .changeHeightMode(.fullscreen)
             .dragGestureEnabled(false)
     }
     func createContent() -> some View {
