@@ -22,6 +22,7 @@ private extension PopupView_Main {
     func configurePopup(_ config: ConfigContainer) -> ConfigContainer { config
         .vertical { $0
             .dragGestureEnabled(true)
+            .cornerRadius(32)
         }
         .centre { $0
             .tapOutsideToDismiss(false)
