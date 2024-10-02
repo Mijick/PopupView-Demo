@@ -66,6 +66,7 @@
 		6DB39ED929B030FE0024677D /* Data.Bottom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.Bottom.swift; sourceTree = "<group>"; };
 		6DB39EDB29B031070024677D /* Data.Centre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.Centre.swift; sourceTree = "<group>"; };
 		6DB39EDD29B0310D0024677D /* Data.Top.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.Top.swift; sourceTree = "<group>"; };
+		6DB582732CAD506600444289 /* TestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestPlan.xctestplan; sourceTree = "<group>"; };
 		6DB5CD842A233FF400814567 /* CentrePopup_ProvideYourName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CentrePopup_ProvideYourName.swift; path = "PopupView-Demo/Views/Popups/Centre/CentrePopup_ProvideYourName.swift"; sourceTree = SOURCE_ROOT; };
 		6DB5CD862A234BF400814567 /* BottomPopup_EditExpense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomPopup_EditExpense.swift; sourceTree = "<group>"; };
 		6DC0834829ACA33E0031481C /* PopupView-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PopupView-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -218,6 +219,7 @@
 				6DC0834F29ACA3400031481C /* Assets.xcassets */,
 				6DC8D34B29AEC65B005FF18C /* Fonts */,
 				6DC8D39729AEC80E005FF18C /* Info.plist */,
+				6DB582732CAD506600444289 /* TestPlan.xctestplan */,
 			);
 			path = Assets;
 			sourceTree = "<group>";

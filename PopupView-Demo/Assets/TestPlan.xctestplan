@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "64301B1E-80F9-4889-973F-D696DE5C5E7B",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:..\/PopupView",
+      "identifier" : "MijickPopupsTests",
+      "name" : "MijickPopupsTests"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:..\/PopupView",
+        "identifier" : "MijickPopupsTests",
+        "name" : "MijickPopupsTests"
+      }
+    }
+  ],
+  "version" : 1
+}
