@@ -12,8 +12,8 @@ import SwiftUI
 import MijickPopups
 
 struct CentrePopup_UnlockNewFeatures: CentrePopup {
-    func configurePopup(popup: CentrePopupConfig) -> CentrePopupConfig {
-        popup.horizontalPadding(28)
+    func configurePopup(config: CentrePopupConfig) -> CentrePopupConfig {
+        config.popupHorizontalPadding(28)
     }
     var body: some View {
         VStack(spacing: 0) {

@@ -12,10 +12,10 @@ import SwiftUI
 import MijickPopups
 
 struct CentrePopup_MoreFeatures: CentrePopup {
-    func configurePopup(popup: CentrePopupConfig) -> CentrePopupConfig {
-        popup.horizontalPadding(28)
+    func configurePopup(config: CentrePopupConfig) -> CentrePopupConfig {
+        config.popupHorizontalPadding(28)
     }
-    func createContent() -> some View {
+    var body: some View {
         VStack(spacing: 0) {
             createIllustration()
             Spacer.height(12)

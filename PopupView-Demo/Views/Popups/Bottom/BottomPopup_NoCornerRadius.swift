@@ -12,8 +12,8 @@ import SwiftUI
 import MijickPopups
 
 struct BottomPopup_NoCornerRadius: BottomPopup {
-    func configurePopup(popup: BottomPopupConfig) -> BottomPopupConfig { popup.cornerRadius(0) }
-    func createContent() -> some View {
+    func configurePopup(config: BottomPopupConfig) -> BottomPopupConfig { config.cornerRadius(0) }
+    var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             createTitle()
             Spacer.height(16)
