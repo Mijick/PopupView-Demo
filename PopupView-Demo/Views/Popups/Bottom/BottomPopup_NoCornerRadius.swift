@@ -52,7 +52,7 @@ private extension BottomPopup_NoCornerRadius {
 
 private extension BottomPopup_NoCornerRadius {
     func createCancelButton() -> some View {
-        Button(action: dismiss) {
+        Button(action: { dismissLastPopup() }) {
             buttonLabel("Cancel")
                 .foregroundColor(.onBackgroundPrimary)
                 .border(Color.onBackgroundPrimary)
@@ -70,7 +70,7 @@ private extension BottomPopup_NoCornerRadius {
 
 private extension BottomPopup_NoCornerRadius {
     func onUnlockButtonTap() {
-        BottomPopup_Default().showAndStack()
+        BottomPopup_Default().present()
     }
 }
 
