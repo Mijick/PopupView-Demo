@@ -17,8 +17,8 @@ struct BottomPopup_Fullscreen: BottomPopup {
 
     func configurePopup(popup: BottomPopupConfig) -> BottomPopupConfig {
         popup
-            .changeHeightMode(.fullscreen)
-            .dragGestureEnabled(false)
+            .heightMode(.fullscreen)
+            .enableDragGesture(false)
     }
     var body: some View {
         VStack(spacing: 0) {

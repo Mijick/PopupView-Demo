@@ -14,7 +14,7 @@ import MijickPopups
 struct BottomPopup_NoSafeArea: BottomPopup {
     func configurePopup(popup: BottomPopupConfig) -> BottomPopupConfig {
         popup
-            .ignoresSafeArea(edges: .bottom)
+            .ignoreSafeArea(edges: .bottom)
             .cornerRadius(0)
     }
     var body: some View {

@@ -14,8 +14,8 @@ import MijickPopups
 struct BottomPopup_Document: BottomPopup {
     func configurePopup(popup: BottomPopupConfig) -> BottomPopupConfig {
         popup
-            .changeHeightMode(.large)
-            .dragGestureEnabled(false)
+            .heightMode(.large)
+            .enableDragGesture(false)
     }
     var body: some View {
         VStack(spacing: 0) {
