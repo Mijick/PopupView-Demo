@@ -21,7 +21,7 @@ struct CentrePopup_ProvideYourName: CentrePopup {
             .horizontalPadding(16)
             .cornerRadius(14)
     }
-    func createContent() -> some View {
+    var body: some View {
         VStack(spacing: 0) {
             Spacer.height(24)
             createIllustration()
@@ -59,7 +59,7 @@ private extension CentrePopup_ProvideYourName {
             .focused($textFieldFocused)
     }
     func createSaveButton() -> some View {
-        Button(action: dismiss) {
+        Button(action: { dismissLastPopup() }) {
             Text("Save")
                 .font(.interBold(15))
                 .foregroundColor(.white)
