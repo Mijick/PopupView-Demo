@@ -52,7 +52,7 @@ private extension CentrePopup_MoreFeatures {
             .fixedSize(horizontal: false, vertical: true)
     }
     func createButton() -> some View {
-        Button(action: dismiss) {
+        Button(action: { dismissLastPopup() }) {
             Text("Back")
                 .font(.satoshiBold(14))
                 .foregroundColor(.onBackgroundSecondary)
