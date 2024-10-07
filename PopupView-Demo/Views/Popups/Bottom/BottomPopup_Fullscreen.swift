@@ -20,7 +20,7 @@ struct BottomPopup_Fullscreen: BottomPopup {
             .changeHeightMode(.fullscreen)
             .dragGestureEnabled(false)
     }
-    func createContent() -> some View {
+    var body: some View {
         VStack(spacing: 0) {
             Spacer.height(12)
             createNavigationBar()
@@ -35,7 +35,7 @@ struct BottomPopup_Fullscreen: BottomPopup {
 
 private extension BottomPopup_Fullscreen {
     func createNavigationBar() -> some View {
-        Button(action: dismiss) {
+        Button(action: { dismissLastPopup() }) {
             Text("Close")
                 .font(.interBold(17))
                 .foregroundColor(.primary)

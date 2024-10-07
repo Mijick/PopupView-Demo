@@ -12,7 +12,7 @@ import SwiftUI
 import MijickPopups
 
 struct BottomPopup_Default: BottomPopup {
-    func createContent() -> some View {
+    var body: some View {
         VStack(spacing: 0) {
             createIllustration()
             Spacer.height(16)
@@ -62,6 +62,6 @@ private extension BottomPopup_Default {
 
 private extension BottomPopup_Default {
     func onButtonTap() {
-        BottomPopup_PrivacyInfo().showAndStack()
+        BottomPopup_PrivacyInfo().present()
     }
 }

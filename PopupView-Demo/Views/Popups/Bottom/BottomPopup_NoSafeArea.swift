@@ -17,7 +17,7 @@ struct BottomPopup_NoSafeArea: BottomPopup {
             .ignoresSafeArea(edges: .bottom)
             .cornerRadius(0)
     }
-    func createContent() -> some View {
+    var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             createTitle()
             Spacer.height(12)
@@ -63,6 +63,6 @@ private extension BottomPopup_NoSafeArea {
 
 private extension BottomPopup_NoSafeArea {
     func onButtonTap() {
-        BottomPopup_NoCornerRadius().showAndStack()
+        BottomPopup_NoCornerRadius().present()
     }
 }

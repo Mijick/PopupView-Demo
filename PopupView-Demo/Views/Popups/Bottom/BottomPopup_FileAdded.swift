@@ -39,7 +39,7 @@ private extension BottomPopup_FileAdded {
         }
     }
     func createButton() -> some View {
-        Button(action: dismiss) {
+        Button(action: { dismissLastPopup() }) {
             Text("Dismiss")
                 .font(.spaceGrotesk(13))
                 .foregroundColor(.white)

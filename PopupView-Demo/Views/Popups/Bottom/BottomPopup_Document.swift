@@ -17,7 +17,7 @@ struct BottomPopup_Document: BottomPopup {
             .changeHeightMode(.large)
             .dragGestureEnabled(false)
     }
-    func createContent() -> some View {
+    var body: some View {
         VStack(spacing: 0) {
             createBar()
             Spacer.height(24)
@@ -47,7 +47,7 @@ private extension BottomPopup_Document {
         }
     }
     func createConfirmButton() -> some View {
-        Button(action: dismiss) {
+        Button(action: { dismissLastPopup() }) {
             Text("Confirm")
                 .font(.interBold(13))
                 .foregroundColor(.white)

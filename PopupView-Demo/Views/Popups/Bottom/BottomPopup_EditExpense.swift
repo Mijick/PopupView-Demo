@@ -15,7 +15,7 @@ struct BottomPopup_EditExpense: BottomPopup {
     @State private var note: String = ""
 
 
-    func createContent() -> some View {
+    var body: some View {
         VStack(spacing: 0) {
             createTopView()
             Spacer.height(24)

@@ -12,7 +12,7 @@ import SwiftUI
 import MijickPopups
 
 struct BottomPopup_PrivacyInfo: BottomPopup {
-    func createContent() -> some View {
+    var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             createBar()
             Spacer.height(24)
@@ -91,7 +91,7 @@ private extension BottomPopup_PrivacyInfo {
             .frame(20)
     }
     func createCancelButton() -> some View {
-        Button(action: dismiss) {
+        Button(action: { dismissLastPopup() }) {
             Text("Cancel")
                 .font(.interBold(13))
                 .foregroundColor(.onBackgroundSecondary)
@@ -102,7 +102,7 @@ private extension BottomPopup_PrivacyInfo {
         }
     }
     func createConfirmButton() -> some View {
-        Button(action: dismiss) {
+        Button(action: { dismissLastPopup() }) {
             Text("Confirm")
                 .font(.interBold(13))
                 .foregroundColor(.white)
@@ -116,6 +116,6 @@ private extension BottomPopup_PrivacyInfo {
 
 private extension BottomPopup_PrivacyInfo {
     func onTapToViewButtonTap() {
-        BottomPopup_Document().showAndStack()
+        BottomPopup_Document().present()
     }
 }
