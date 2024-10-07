@@ -12,14 +12,14 @@ import SwiftUI
 import MijickPopups
 
 struct BottomPopup_FileAdded: BottomPopup {
-    func configurePopup(popup: BottomPopupConfig) -> BottomPopupConfig {
-        popup
+    func configurePopup(config: BottomPopupConfig) -> BottomPopupConfig {
+        config
             .horizontalPadding(20)
             .bottomPadding(Screen.safeArea.bottom + 8)
             .cornerRadius(16)
             .tapOutsideToDismiss(true)
     }
-    func createContent() -> some View {
+    var body: some View {
         HStack(spacing: 0) {
             createText()
             Spacer()
