@@ -12,8 +12,8 @@ import SwiftUI
 import MijickPopups
 
 struct TopPopup_Notification: TopPopup {
-    func configurePopup(popup: TopPopupConfig) -> TopPopupConfig {
-        popup
+    func configurePopup(config: TopPopupConfig) -> TopPopupConfig {
+        config
             .popupTopPadding(Screen.safeArea.top)
             .popupHorizontalPadding(16)
     }

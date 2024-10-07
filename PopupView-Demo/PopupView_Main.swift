@@ -14,7 +14,7 @@ import MijickPopups
 @main struct PopupView_Main: App {
     var body: some Scene {
         WindowGroup {
-            ContentView().implementPopupView(config: configurePopup)
+            ContentView().registerPopups(configBuilder: configurePopup)
         }
     }
 }

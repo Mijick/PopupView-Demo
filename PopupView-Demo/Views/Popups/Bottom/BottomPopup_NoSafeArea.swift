@@ -12,8 +12,8 @@ import SwiftUI
 import MijickPopups
 
 struct BottomPopup_NoSafeArea: BottomPopup {
-    func configurePopup(popup: BottomPopupConfig) -> BottomPopupConfig {
-        popup
+    func configurePopup(config: BottomPopupConfig) -> BottomPopupConfig {
+        config
             .ignoreSafeArea(edges: .bottom)
             .cornerRadius(0)
     }

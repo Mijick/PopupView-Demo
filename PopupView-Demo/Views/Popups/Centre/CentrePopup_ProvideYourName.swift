@@ -16,8 +16,8 @@ struct CentrePopup_ProvideYourName: CentrePopup {
     @FocusState private var textFieldFocused
 
 
-    func configurePopup(popup: CentrePopupConfig) -> CentrePopupConfig {
-        popup
+    func configurePopup(config: CentrePopupConfig) -> CentrePopupConfig {
+        config
             .popupHorizontalPadding(16)
             .cornerRadius(14)
     }

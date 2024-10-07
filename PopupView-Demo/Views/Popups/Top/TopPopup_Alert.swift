@@ -12,8 +12,8 @@ import SwiftUI
 import MijickPopups
 
 struct TopPopup_Alert: TopPopup {
-    func configurePopup(popup: TopPopupConfig) -> TopPopupConfig {
-        popup
+    func configurePopup(config: TopPopupConfig) -> TopPopupConfig {
+        config
             .backgroundColor(.primary)
             .cornerRadius(0)
     }

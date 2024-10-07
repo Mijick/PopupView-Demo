@@ -12,8 +12,8 @@ import SwiftUI
 import MijickPopups
 
 struct BottomPopup_Document: BottomPopup {
-    func configurePopup(popup: BottomPopupConfig) -> BottomPopupConfig {
-        popup
+    func configurePopup(config: BottomPopupConfig) -> BottomPopupConfig {
+        config
             .heightMode(.large)
             .enableDragGesture(false)
     }

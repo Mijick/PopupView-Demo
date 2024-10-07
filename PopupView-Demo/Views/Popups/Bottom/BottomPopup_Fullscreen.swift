@@ -15,8 +15,8 @@ struct BottomPopup_Fullscreen: BottomPopup {
     @State private var closeButtonAppeared: Bool = false
 
 
-    func configurePopup(popup: BottomPopupConfig) -> BottomPopupConfig {
-        popup
+    func configurePopup(config: BottomPopupConfig) -> BottomPopupConfig {
+        config
             .heightMode(.fullscreen)
             .enableDragGesture(false)
     }
