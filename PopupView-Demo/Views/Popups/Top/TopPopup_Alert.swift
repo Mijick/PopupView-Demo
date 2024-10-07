@@ -14,10 +14,10 @@ import MijickPopups
 struct TopPopup_Alert: TopPopup {
     func configurePopup(popup: TopPopupConfig) -> TopPopupConfig {
         popup
-            .backgroundColour(.primary)
+            .backgroundColor(.primary)
             .cornerRadius(0)
     }
-    func createContent() -> some View {
+    var body: some View {
         HStack(spacing: 0) {
             createImage()
             Spacer.width(12)
@@ -70,6 +70,6 @@ private extension TopPopup_Alert {
 
 private extension TopPopup_Alert {
     func onShowNextButtonTap() {
-        TopPopup_Notification().showAndStack()
+        TopPopup_Notification().present()
     }
 }

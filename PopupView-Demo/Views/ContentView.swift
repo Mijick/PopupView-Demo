@@ -141,6 +141,6 @@ private extension Item {
 
 private extension Item {
     func onButtonTap() {
-        data.popup.showAndStack()
+        data.popup.present()
     }
 }
