@@ -14,10 +14,10 @@ import MijickPopups
 struct BottomPopup_FileAdded: BottomPopup {
     func configurePopup(config: BottomPopupConfig) -> BottomPopupConfig {
         config
-            .horizontalPadding(20)
-            .bottomPadding(Screen.safeArea.bottom + 8)
+            .popupHorizontalPadding(20)
+            .popupBottomPadding(Screen.safeArea.bottom + 8)
             .cornerRadius(16)
-            .tapOutsideToDismiss(true)
+            .tapOutsideToDismissPopup(true)
     }
     var body: some View {
         HStack(spacing: 0) {

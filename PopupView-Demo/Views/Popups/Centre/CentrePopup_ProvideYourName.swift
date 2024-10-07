@@ -18,7 +18,7 @@ struct CentrePopup_ProvideYourName: CentrePopup {
 
     func configurePopup(popup: CentrePopupConfig) -> CentrePopupConfig {
         popup
-            .horizontalPadding(16)
+            .popupHorizontalPadding(16)
             .cornerRadius(14)
     }
     var body: some View {

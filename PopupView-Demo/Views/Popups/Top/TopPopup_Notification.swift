@@ -14,8 +14,8 @@ import MijickPopups
 struct TopPopup_Notification: TopPopup {
     func configurePopup(popup: TopPopupConfig) -> TopPopupConfig {
         popup
-            .topPadding(Screen.safeArea.top)
-            .horizontalPadding(16)
+            .popupTopPadding(Screen.safeArea.top)
+            .popupHorizontalPadding(16)
     }
     var body: some View {
         VStack(alignment: .customAlignment, spacing: 12) {
