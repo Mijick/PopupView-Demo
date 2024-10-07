@@ -21,11 +21,11 @@ import MijickPopups
 private extension PopupView_Main {
     func configurePopup(_ config: ConfigContainer) -> ConfigContainer { config
         .vertical { $0
-            .dragGestureEnabled(true)
+            .enableDragGesture(true)
             .cornerRadius(32)
         }
         .centre { $0
-            .tapOutsideToDismiss(false)
+            .tapOutsideToDismissPopup(false)
         }
     }
 }
