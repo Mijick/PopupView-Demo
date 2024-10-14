@@ -12,20 +12,18 @@ import SwiftUI
 import MijickPopups
 
 @main struct PopupView_Main: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView().registerPopups(configBuilder: configurePopup)
-        }
-    }
-}
-private extension PopupView_Main {
-    func configurePopup(_ config: ConfigContainer) -> ConfigContainer { config
-        .vertical { $0
-            .enableDragGesture(true)
-            .cornerRadius(32)
-        }
-        .centre { $0
-            .tapOutsideToDismissPopup(false)
-        }
-    }
+    var body: some Scene { WindowGroup {
+        ContentView()
+            .registerPopups { config in config
+                .vertical { $0
+                    .enableDragGesture(true)
+                    .tapOutsideToDismissPopup(true)
+                    .cornerRadius(32)
+                }
+                .centre { $0
+                    .tapOutsideToDismissPopup(false)
+                    .backgroundColor(.red)
+                }
+            }
+    }}
 }
