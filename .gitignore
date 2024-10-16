@@ -8,6 +8,7 @@ DerivedData/
 .swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
 .netrc
 *.xcuserstate
-PopupView-Demo.xcodeproj/project.xcworkspace
-PopupView-Demo.xcodeproj/xcshareddata
-PopupView-Demo.xcodeproj/xcuserdata
+*/project.xcworkspace
+*/xcshareddata
+*/xcuserdata
+/*.xcuserstate
