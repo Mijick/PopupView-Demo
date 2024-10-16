@@ -22,13 +22,13 @@
 		6DA1411729AF6C9100A3DC0A /* BottomPopup_PrivacyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA1411629AF6C9100A3DC0A /* BottomPopup_PrivacyInfo.swift */; };
 		6DA1411929AF6C9B00A3DC0A /* BottomPopup_Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA1411829AF6C9B00A3DC0A /* BottomPopup_Document.swift */; };
 		6DA1411B29AF720C00A3DC0A /* View++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA1411A29AF720C00A3DC0A /* View++.swift */; };
+		6DAD242B2C96FDA8009CE12B /* MijickPopups in Frameworks */ = {isa = PBXBuildFile; productRef = 6DAD242A2C96FDA8009CE12B /* MijickPopups */; };
 		6DB39ED829B030C30024677D /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB39ED729B030C30024677D /* Data.swift */; };
 		6DB39EDA29B030FE0024677D /* Data.Bottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB39ED929B030FE0024677D /* Data.Bottom.swift */; };
 		6DB39EDC29B031070024677D /* Data.Centre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB39EDB29B031070024677D /* Data.Centre.swift */; };
 		6DB39EDE29B0310D0024677D /* Data.Top.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB39EDD29B0310D0024677D /* Data.Top.swift */; };
 		6DB5CD852A233FF400814567 /* CentrePopup_ProvideYourName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB5CD842A233FF400814567 /* CentrePopup_ProvideYourName.swift */; };
 		6DB5CD872A234BF400814567 /* BottomPopup_EditExpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB5CD862A234BF400814567 /* BottomPopup_EditExpense.swift */; };
-		6DBB5D8A2AB665F9009A5750 /* MijickPopupView in Frameworks */ = {isa = PBXBuildFile; productRef = 6DBB5D892AB665F9009A5750 /* MijickPopupView */; };
 		6DC0834C29ACA33E0031481C /* PopupView_Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC0834B29ACA33E0031481C /* PopupView_Main.swift */; };
 		6DC0834E29ACA33E0031481C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC0834D29ACA33E0031481C /* ContentView.swift */; };
 		6DC0835029ACA3400031481C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DC0834F29ACA3400031481C /* Assets.xcassets */; };
@@ -68,7 +68,7 @@
 		6DB39EDD29B0310D0024677D /* Data.Top.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.Top.swift; sourceTree = "<group>"; };
 		6DB5CD842A233FF400814567 /* CentrePopup_ProvideYourName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CentrePopup_ProvideYourName.swift; path = "PopupView-Demo/Views/Popups/Centre/CentrePopup_ProvideYourName.swift"; sourceTree = SOURCE_ROOT; };
 		6DB5CD862A234BF400814567 /* BottomPopup_EditExpense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomPopup_EditExpense.swift; sourceTree = "<group>"; };
-		6DC0834829ACA33E0031481C /* PopupView-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PopupView-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DC0834829ACA33E0031481C /* MijickPopups.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MijickPopups.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DC0834B29ACA33E0031481C /* PopupView_Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView_Main.swift; sourceTree = "<group>"; };
 		6DC0834D29ACA33E0031481C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6DC0834F29ACA3400031481C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,7 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DBB5D8A2AB665F9009A5750 /* MijickPopupView in Frameworks */,
+				6DAD242B2C96FDA8009CE12B /* MijickPopups in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +130,13 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		6DAD24292C96FDA8009CE12B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6DADDF9029ADEF7E0094E9D1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,13 +163,14 @@
 				6DC0834A29ACA33E0031481C /* PopupView-Demo */,
 				6DC0834929ACA33E0031481C /* Products */,
 				6D3FD2732A1ADAA8005EF486 /* PopupView */,
+				6DAD24292C96FDA8009CE12B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		6DC0834929ACA33E0031481C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6DC0834829ACA33E0031481C /* PopupView-Demo.app */,
+				6DC0834829ACA33E0031481C /* MijickPopups.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -265,9 +273,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6DC0834729ACA33E0031481C /* PopupView-Demo */ = {
+		6DC0834729ACA33E0031481C /* MijickPopups */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6DC0835629ACA3400031481C /* Build configuration list for PBXNativeTarget "PopupView-Demo" */;
+			buildConfigurationList = 6DC0835629ACA3400031481C /* Build configuration list for PBXNativeTarget "MijickPopups" */;
 			buildPhases = (
 				6DC0834429ACA33E0031481C /* Sources */,
 				6DC0834529ACA33E0031481C /* Frameworks */,
@@ -277,12 +285,12 @@
 			);
 			dependencies = (
 			);
-			name = "PopupView-Demo";
+			name = MijickPopups;
 			packageProductDependencies = (
-				6DBB5D892AB665F9009A5750 /* MijickPopupView */,
+				6DAD242A2C96FDA8009CE12B /* MijickPopups */,
 			);
 			productName = "PopupView-Example";
-			productReference = 6DC0834829ACA33E0031481C /* PopupView-Demo.app */;
+			productReference = 6DC0834829ACA33E0031481C /* MijickPopups.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -310,13 +318,13 @@
 			);
 			mainGroup = 6DC0833F29ACA33E0031481C;
 			packageReferences = (
-				6DC0835929ACA35F0031481C /* XCRemoteSwiftPackageReference "PopupView" */,
+				6DC0835929ACA35F0031481C /* XCRemoteSwiftPackageReference "Popups" */,
 			);
 			productRefGroup = 6DC0834929ACA33E0031481C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6DC0834729ACA33E0031481C /* PopupView-Demo */,
+				6DC0834729ACA33E0031481C /* MijickPopups */,
 			);
 		};
 /* End PBXProject section */
@@ -503,6 +511,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "PopupView-Demo/Assets/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = mijickPopups;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -512,10 +521,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mijick.PopupView-Demo";
-				"PRODUCT_BUNDLE_IDENTIFIER[sdk=appletvos*]" = com.mijick.PopupViewDemo;
-				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = com.mijick.PopupViewDemo;
-				"PRODUCT_BUNDLE_IDENTIFIER[sdk=macosx*]" = com.mijick.PopupViewDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mijick.popups;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = NO;
@@ -536,6 +542,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "PopupView-Demo/Assets/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = mijickPopups;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -545,10 +552,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mijick.PopupView-Demo";
-				"PRODUCT_BUNDLE_IDENTIFIER[sdk=appletvos*]" = com.mijick.PopupViewDemo;
-				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = com.mijick.PopupViewDemo;
-				"PRODUCT_BUNDLE_IDENTIFIER[sdk=macosx*]" = com.mijick.PopupViewDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mijick.popups;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = NO;
@@ -571,7 +575,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6DC0835629ACA3400031481C /* Build configuration list for PBXNativeTarget "PopupView-Demo" */ = {
+		6DC0835629ACA3400031481C /* Build configuration list for PBXNativeTarget "MijickPopups" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6DC0835729ACA3400031481C /* Debug */,
@@ -583,9 +587,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		6DC0835929ACA35F0031481C /* XCRemoteSwiftPackageReference "PopupView" */ = {
+		6DC0835929ACA35F0031481C /* XCRemoteSwiftPackageReference "Popups" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Mijick/PopupView";
+			repositoryURL = "https://github.com/Mijick/Popups";
 			requirement = {
 				branch = main;
 				kind = branch;
@@ -594,9 +598,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		6DBB5D892AB665F9009A5750 /* MijickPopupView */ = {
+		6DAD242A2C96FDA8009CE12B /* MijickPopups */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = MijickPopupView;
+			package = 6DC0835929ACA35F0031481C /* XCRemoteSwiftPackageReference "Popups" */;
+			productName = MijickPopups;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -9,11 +9,11 @@
 
 
 import SwiftUI
-import MijickPopupView
+import MijickPopups
 
 struct BottomPopup_NoCornerRadius: BottomPopup {
-    func configurePopup(popup: BottomPopupConfig) -> BottomPopupConfig { popup.cornerRadius(0) }
-    func createContent() -> some View {
+    func configurePopup(config: BottomPopupConfig) -> BottomPopupConfig { config.cornerRadius(0) }
+    var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             createTitle()
             Spacer.height(16)
@@ -52,7 +52,7 @@ private extension BottomPopup_NoCornerRadius {
 
 private extension BottomPopup_NoCornerRadius {
     func createCancelButton() -> some View {
-        Button(action: dismiss) {
+        Button(action: { dismissLastPopup() }) {
             buttonLabel("Cancel")
                 .foregroundColor(.onBackgroundPrimary)
                 .border(Color.onBackgroundPrimary)
@@ -70,7 +70,7 @@ private extension BottomPopup_NoCornerRadius {
 
 private extension BottomPopup_NoCornerRadius {
     func onUnlockButtonTap() {
-        BottomPopup_Default().showAndStack()
+        BottomPopup_Default().present()
     }
 }
 

@@ -9,13 +9,13 @@
 
 
 import SwiftUI
-import MijickPopupView
+import MijickPopups
 
 struct CentrePopup_UnlockNewFeatures: CentrePopup {
-    func configurePopup(popup: CentrePopupConfig) -> CentrePopupConfig {
-        popup.horizontalPadding(28)
+    func configurePopup(config: CentrePopupConfig) -> CentrePopupConfig {
+        config.popupHorizontalPadding(28)
     }
-    func createContent() -> some View {
+    var body: some View {
         VStack(spacing: 0) {
             createIllustration()
             Spacer.height(12)
@@ -61,7 +61,7 @@ private extension CentrePopup_UnlockNewFeatures {
 
 private extension CentrePopup_UnlockNewFeatures {
     func createCancelButton() -> some View {
-        Button(action: dismiss) {
+        Button(action: { dismissLastPopup() }) {
             Text("Cancel")
                 .font(.satoshiBold(14))
                 .foregroundColor(.onBackgroundSecondary)
@@ -86,6 +86,6 @@ private extension CentrePopup_UnlockNewFeatures {
 
 private extension CentrePopup_UnlockNewFeatures {
     func onUnlockButtonTap() {
-        CentrePopup_MoreFeatures().showAndStack()
+        CentrePopup_MoreFeatures().present()
     }
 }

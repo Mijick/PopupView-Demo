@@ -9,15 +9,15 @@
 
 
 import SwiftUI
-import MijickPopupView
+import MijickPopups
 
 struct TopPopup_Notification: TopPopup {
-    func configurePopup(popup: TopPopupConfig) -> TopPopupConfig {
-        popup
-            .topPadding(Screen.safeArea.top)
-            .horizontalPadding(16)
+    func configurePopup(config: TopPopupConfig) -> TopPopupConfig {
+        config
+            .popupTopPadding(Screen.safeArea.top)
+            .popupHorizontalPadding(16)
     }
-    func createContent() -> some View {
+    var body: some View {
         VStack(alignment: .customAlignment, spacing: 12) {
             createTopView()
             createDismissButton()
@@ -39,7 +39,7 @@ private extension TopPopup_Notification {
         }
     }
     func createDismissButton() -> some View {
-        Button(action: dismiss) {
+        Button(action: { dismissLastPopup() }) {
             Text("Dismiss".uppercased())
                 .font(.openSansBold(13))
                 .foregroundColor(.primary)

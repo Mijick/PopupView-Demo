@@ -9,15 +9,15 @@
 
 
 import SwiftUI
-import MijickPopupView
+import MijickPopups
 
 struct BottomPopup_NoSafeArea: BottomPopup {
-    func configurePopup(popup: BottomPopupConfig) -> BottomPopupConfig {
-        popup
-            .contentIgnoresSafeArea(true)
+    func configurePopup(config: BottomPopupConfig) -> BottomPopupConfig {
+        config
+            .ignoreSafeArea(edges: .bottom)
             .cornerRadius(0)
     }
-    func createContent() -> some View {
+    var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             createTitle()
             Spacer.height(12)
@@ -63,6 +63,6 @@ private extension BottomPopup_NoSafeArea {
 
 private extension BottomPopup_NoSafeArea {
     func onButtonTap() {
-        BottomPopup_NoCornerRadius().showAndStack()
+        BottomPopup_NoCornerRadius().present()
     }
 }

@@ -9,13 +9,13 @@
 
 
 import SwiftUI
-import MijickPopupView
+import MijickPopups
 
 struct CentrePopup_MoreFeatures: CentrePopup {
-    func configurePopup(popup: CentrePopupConfig) -> CentrePopupConfig {
-        popup.horizontalPadding(28)
+    func configurePopup(config: CentrePopupConfig) -> CentrePopupConfig {
+        config.popupHorizontalPadding(28)
     }
-    func createContent() -> some View {
+    var body: some View {
         VStack(spacing: 0) {
             createIllustration()
             Spacer.height(12)
@@ -52,7 +52,7 @@ private extension CentrePopup_MoreFeatures {
             .fixedSize(horizontal: false, vertical: true)
     }
     func createButton() -> some View {
-        Button(action: dismiss) {
+        Button(action: { dismissLastPopup() }) {
             Text("Back")
                 .font(.satoshiBold(14))
                 .foregroundColor(.onBackgroundSecondary)

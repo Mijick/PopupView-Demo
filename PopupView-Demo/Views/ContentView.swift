@@ -9,7 +9,7 @@
 
 
 import SwiftUI
-import MijickPopupView
+import MijickPopups
 
 struct ContentView: View {
     var body: some View {
@@ -141,6 +141,6 @@ private extension Item {
 
 private extension Item {
     func onButtonTap() {
-        data.popup.showAndStack()
+        data.popup.present()
     }
 }

@@ -9,16 +9,17 @@
 
 
 import SwiftUI
-import MijickPopupView
+import MijickPopups
 
 struct BottomPopup_FileAdded: BottomPopup {
-    func configurePopup(popup: BottomPopupConfig) -> BottomPopupConfig {
-        popup
-            .horizontalPadding(20)
-            .bottomPadding(Screen.safeArea.bottom + 8)
+    func configurePopup(config: BottomPopupConfig) -> BottomPopupConfig {
+        config
+            .popupHorizontalPadding(20)
+            .popupBottomPadding(Screen.safeArea.bottom + 8)
             .cornerRadius(16)
+            .tapOutsideToDismissPopup(true)
     }
-    func createContent() -> some View {
+    var body: some View {
         HStack(spacing: 0) {
             createText()
             Spacer()
@@ -38,7 +39,7 @@ private extension BottomPopup_FileAdded {
         }
     }
     func createButton() -> some View {
-        Button(action: dismiss) {
+        Button(action: { dismissLastPopup() }) {
             Text("Dismiss")
                 .font(.spaceGrotesk(13))
                 .foregroundColor(.white)

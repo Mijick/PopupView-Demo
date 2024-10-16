@@ -9,15 +9,15 @@
 
 
 import SwiftUI
-import MijickPopupView
+import MijickPopups
 
 struct BottomPopup_Document: BottomPopup {
-    func configurePopup(popup: BottomPopupConfig) -> BottomPopupConfig {
-        popup
-            .contentFillsWholeHeigh(true)
-            .dragGestureEnabled(false)
+    func configurePopup(config: BottomPopupConfig) -> BottomPopupConfig {
+        config
+            .heightMode(.large)
+            .enableDragGesture(false)
     }
-    func createContent() -> some View {
+    var body: some View {
         VStack(spacing: 0) {
             createBar()
             Spacer.height(24)
@@ -47,7 +47,7 @@ private extension BottomPopup_Document {
         }
     }
     func createConfirmButton() -> some View {
-        Button(action: dismiss) {
+        Button(action: { dismissLastPopup() }) {
             Text("Confirm")
                 .font(.interBold(13))
                 .foregroundColor(.white)

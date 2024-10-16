@@ -9,14 +9,13 @@
 
 
 import SwiftUI
-import MijickPopupView
+import MijickPopups
 
 struct BottomPopup_EditExpense: BottomPopup {
     @State private var note: String = ""
 
 
-    func configurePopup(popup: BottomPopupConfig) -> BottomPopupConfig { popup.distanceFromKeyboard(12) }
-    func createContent() -> some View {
+    var body: some View {
         VStack(spacing: 0) {
             createTopView()
             Spacer.height(24)

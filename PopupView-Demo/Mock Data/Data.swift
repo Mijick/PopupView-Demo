@@ -9,7 +9,7 @@
 
 
 import SwiftUI
-import MijickPopupView
+import MijickPopups
 
 enum Data {}
 protocol MockData: RawRepresentable<String>, CaseIterable {

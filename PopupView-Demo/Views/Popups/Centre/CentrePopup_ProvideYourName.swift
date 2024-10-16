@@ -9,19 +9,19 @@
 
 
 import SwiftUI
-import MijickPopupView
+import MijickPopups
 
 struct CentrePopup_ProvideYourName: CentrePopup {
     @State private var name: String = ""
     @FocusState private var textFieldFocused
 
 
-    func configurePopup(popup: CentrePopupConfig) -> CentrePopupConfig {
-        popup
-            .horizontalPadding(16)
+    func configurePopup(config: CentrePopupConfig) -> CentrePopupConfig {
+        config
+            .popupHorizontalPadding(16)
             .cornerRadius(14)
     }
-    func createContent() -> some View {
+    var body: some View {
         VStack(spacing: 0) {
             Spacer.height(24)
             createIllustration()
@@ -59,7 +59,7 @@ private extension CentrePopup_ProvideYourName {
             .focused($textFieldFocused)
     }
     func createSaveButton() -> some View {
-        Button(action: dismiss) {
+        Button(action: { dismissLastPopup() }) {
             Text("Save")
                 .font(.interBold(15))
                 .foregroundColor(.white)

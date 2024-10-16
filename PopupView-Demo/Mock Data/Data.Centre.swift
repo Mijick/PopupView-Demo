@@ -9,7 +9,7 @@
 
 
 import Foundation
-import MijickPopupView
+import MijickPopups
 
 extension Data {
     enum Centre: String, MockData { case unlockNewFeatures, provideYourName }

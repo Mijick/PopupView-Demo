@@ -9,18 +9,18 @@
 
 
 import SwiftUI
-import MijickPopupView
+import MijickPopups
 
 struct BottomPopup_Fullscreen: BottomPopup {
     @State private var closeButtonAppeared: Bool = false
 
 
-    func configurePopup(popup: BottomPopupConfig) -> BottomPopupConfig {
-        popup
-            .contentFillsEntireScreen(true)
-            .dragGestureEnabled(false)
+    func configurePopup(config: BottomPopupConfig) -> BottomPopupConfig {
+        config
+            .heightMode(.fullscreen)
+            .enableDragGesture(false)
     }
-    func createContent() -> some View {
+    var body: some View {
         VStack(spacing: 0) {
             Spacer.height(12)
             createNavigationBar()
@@ -35,7 +35,7 @@ struct BottomPopup_Fullscreen: BottomPopup {
 
 private extension BottomPopup_Fullscreen {
     func createNavigationBar() -> some View {
-        Button(action: dismiss) {
+        Button(action: { dismissLastPopup() }) {
             Text("Close")
                 .font(.interBold(17))
                 .foregroundColor(.primary)
@@ -49,7 +49,7 @@ private extension BottomPopup_Fullscreen {
 }
 
 private extension BottomPopup_Fullscreen {
-    func onAppear() { DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+    func onAppear() { DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
         closeButtonAppeared = true
     }}
 }
