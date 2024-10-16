@@ -68,7 +68,7 @@
 		6DB39EDD29B0310D0024677D /* Data.Top.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.Top.swift; sourceTree = "<group>"; };
 		6DB5CD842A233FF400814567 /* CentrePopup_ProvideYourName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CentrePopup_ProvideYourName.swift; path = "PopupView-Demo/Views/Popups/Centre/CentrePopup_ProvideYourName.swift"; sourceTree = SOURCE_ROOT; };
 		6DB5CD862A234BF400814567 /* BottomPopup_EditExpense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomPopup_EditExpense.swift; sourceTree = "<group>"; };
-		6DC0834829ACA33E0031481C /* PopupView-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PopupView-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DC0834829ACA33E0031481C /* MijickPopups.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MijickPopups.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DC0834B29ACA33E0031481C /* PopupView_Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView_Main.swift; sourceTree = "<group>"; };
 		6DC0834D29ACA33E0031481C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6DC0834F29ACA3400031481C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -170,7 +170,7 @@
 		6DC0834929ACA33E0031481C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6DC0834829ACA33E0031481C /* PopupView-Demo.app */,
+				6DC0834829ACA33E0031481C /* MijickPopups.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -273,9 +273,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6DC0834729ACA33E0031481C /* PopupView-Demo */ = {
+		6DC0834729ACA33E0031481C /* MijickPopups */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6DC0835629ACA3400031481C /* Build configuration list for PBXNativeTarget "PopupView-Demo" */;
+			buildConfigurationList = 6DC0835629ACA3400031481C /* Build configuration list for PBXNativeTarget "MijickPopups" */;
 			buildPhases = (
 				6DC0834429ACA33E0031481C /* Sources */,
 				6DC0834529ACA33E0031481C /* Frameworks */,
@@ -285,12 +285,12 @@
 			);
 			dependencies = (
 			);
-			name = "PopupView-Demo";
+			name = MijickPopups;
 			packageProductDependencies = (
 				6DAD242A2C96FDA8009CE12B /* MijickPopups */,
 			);
 			productName = "PopupView-Example";
-			productReference = 6DC0834829ACA33E0031481C /* PopupView-Demo.app */;
+			productReference = 6DC0834829ACA33E0031481C /* MijickPopups.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -324,7 +324,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6DC0834729ACA33E0031481C /* PopupView-Demo */,
+				6DC0834729ACA33E0031481C /* MijickPopups */,
 			);
 		};
 /* End PBXProject section */
@@ -575,7 +575,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6DC0835629ACA3400031481C /* Build configuration list for PBXNativeTarget "PopupView-Demo" */ = {
+		6DC0835629ACA3400031481C /* Build configuration list for PBXNativeTarget "MijickPopups" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6DC0835729ACA3400031481C /* Debug */,
